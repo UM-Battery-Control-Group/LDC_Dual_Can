@@ -1,0 +1,463 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD23\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12/18/2023</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">3:34:06 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc" class="file"><acronym title="\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc">\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">21</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Waived Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">5</td></tr>
+</table>
+</td>
+</table><a name="IDBW04XYSERITVCGR1GBK2YQR5QFNNHVLE5CEBCWN3IVRKCBMLIHLM"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID004QWPM1NQSLCT3SKYWFE3TTKLWZ22NK5J41CRNUFXFCQBWGC0EK">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">6</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2RHH0UAMGAWNC2DOOKUHWPUYN52I2IDD0I3GVM2HICBI45HFDPK">Clearance Constraint (Gap=0mm) (IsKeepOut),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGDHA4HQX3RIUGMSX054NZ2KDXFDBSRTUQFUFSUKNURD4WRZRTRGL">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">7</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYETNFNSOWENGIS0FYQGSFZJKSMAFVSFXIYDSMGFF2ZRNSIKO2VAL">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEN3YSMTEYOLGPAQDR2KO11K4MI3EZEZSWAM00J0YLB21C2OFLJN">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2QD4Y3MNMPRMH2R3UKU0KEFT4CVZLM5CZHFCCZOHW2K5RZ4XE1JJ">Width Constraint (Min=0.127mm) (Max=10mm) (Preferred=0.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUBH3H4OLKA4AHMF02WB320VMLFAZMZJ3QZ2LHZDC4UC2QGHLZD0">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDT1BWDNODDXS4FDOZELC5Z5ZSCO2PP1YLGQ4CNDIGL5OFS3QP5KIO">Minimum Annular Ring (Minimum=0.13mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDL3E4V5F1UMJBLSFDTKJ02CFLOFCEY2UCBUQSIKBJMDQRWSL23LOL">Hole Size Constraint (Min=0.2mm) (Max=5mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDV05ULSGZWCD1KH0KGKQOUIGU0BR5UQ1KZOJKYQPYQUA42KCXAJXO">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXYBRLSOWZT3BLQZIAJVAYMI2AF0ANFVKYQEH1ZI5F5HUK2JCGA5I">Minimum Solder Mask Sliver (Gap=0.127mm) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDROIFCFWO13JCCHV3NG0DTTBCKDR3VFRV0PQERHEUP2DQTA1DKKAP">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRN2OD1EK4CBIEA3ZS5JC34PXBPHWIUSFOCWXOBNPGOYRNRAZVHEE">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJYJN53VJXXQQKLU1R32N4GFDLIHQGCYG4USL1TI0EYRD2II0V53E">Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) </a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQ5H2DPHY2LLQC4HQBL1AFBZGUHXTCKLI0WTFPREI1ZRFBECTVZVK">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">21</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Waived Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEU4GPSSZVSRYB3JVTIE5HLERLGK3C11FJ0SZP22C452ASNOPWC">Minimum Annular Ring (Minimum=0.13mm) (All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQ1Y2TL4TGQCMEUPYICONLQKHPJVUM12YHU4ZRPHQPTDNRTAJKNOP">Minimum Solder Mask Sliver (Gap=0.127mm) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">5</td>
+</tr>
+</table><br><a name="IDISMCENK2FKYBHP5ZQQOQKPWTWGWZ04IZUIG4ROHZBZZQHF52I3L"><h2>Rule Violations</h2></a><a name="ID004QWPM1NQSLCT3SKYWFE3TTKLWZ22NK5J41CRNUFXFCQBWGC0EK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1629.725mil|Location2.X=1635.975mil|Location1.Y=901.342mil|Location2.Y=907.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1629.725mil|Location2.X=1635.975mil|Location1.Y=901.342mil|Location2.Y=907.591mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.2mm) Between Pad L1-1(41.474mm,23.253mm) on Top Layer And Track (41.474mm,22.672mm)(41.474mm,23.253mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1625.708mil|Location2.X=1632.732mil|Location1.Y=883.684mil|Location2.Y=890.637mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1625.708mil|Location2.X=1632.732mil|Location1.Y=883.684mil|Location2.Y=890.637mil|Absolute=True">Clearance Constraint: (0.027mm &lt; 0.1mm) Between Track (39.4mm,22.475mm)(41.278mm,22.475mm) on Top Layer And Track (41.474mm,22.672mm)(41.474mm,23.253mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1594.298mil|Location2.X=1597.922mil|Location1.Y=1050.843mil|Location2.Y=1054.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1594.298mil|Location2.X=1597.922mil|Location1.Y=1050.843mil|Location2.Y=1054.468mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.1mm) Between Track (40.541mm,25.466mm)(40.541mm,26.737mm) on Top Layer And Track (40.541mm,26.737mm)(40.541mm,27.317mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1631.038mil|Location2.X=1634.662mil|Location1.Y=890.78mil|Location2.Y=894.405mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1631.038mil|Location2.X=1634.662mil|Location1.Y=890.78mil|Location2.Y=894.405mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.1mm) Between Track (41.278mm,22.475mm)(41.474mm,22.672mm) on Top Layer And Track (41.474mm,22.672mm)(41.474mm,23.253mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1631.038mil|Location2.X=1634.662mil|Location1.Y=913.654mil|Location2.Y=917.279mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1631.038mil|Location2.X=1634.662mil|Location1.Y=913.654mil|Location2.Y=917.279mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.1mm) Between Track (41.474mm,22.672mm)(41.474mm,23.253mm) on Top Layer And Track (41.474mm,23.253mm)(42.084mm,23.253mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1631.038mil|Location2.X=1634.662mil|Location1.Y=913.654mil|Location2.Y=917.279mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1631.038mil|Location2.X=1634.662mil|Location1.Y=913.654mil|Location2.Y=917.279mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.1mm) Between Track (41.474mm,22.672mm)(41.474mm,23.253mm) on Top Layer And Track (41.474mm,23.253mm)(42.084mm,23.253mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDGDHA4HQX3RIUGMSX054NZ2KDXFDBSRTUQFUFSUKNURD4WRZRTRGL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1620.925mil|Location2.X=1644.775mil|Location1.Y=901.052mil|Location2.Y=924.903mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1620.925mil|Location2.X=1644.775mil|Location1.Y=901.052mil|Location2.Y=924.903mil|Absolute=True">Short-Circuit Constraint: Between Pad L1-1(41.474mm,23.253mm) on Top Layer And Track (41.474mm,22.672mm)(41.474mm,23.253mm) on Top Layer Location : [X = 41.474mm][Y = 23.19mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1585.082mil|Location2.X=1607.138mil|Location1.Y=1061.488mil|Location2.Y=1083.543mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1585.082mil|Location2.X=1607.138mil|Location1.Y=1061.488mil|Location2.Y=1083.543mil|Absolute=True">Short-Circuit Constraint: Between Pad L1-2(40.541mm,27.317mm) on Top Layer And Track (40.541mm,26.737mm)(40.541mm,27.317mm) on Top Layer Location : [X = 40.541mm][Y = 27.242mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1588.538mil|Location2.X=1603.682mil|Location1.Y=1044.542mil|Location2.Y=1059.686mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1588.538mil|Location2.X=1603.682mil|Location1.Y=1044.542mil|Location2.Y=1059.686mil|Absolute=True">Short-Circuit Constraint: Between Track (40.541mm,25.466mm)(40.541mm,26.737mm) on Top Layer And Track (40.541mm,26.737mm)(40.541mm,27.317mm) on Top Layer Location : [X = 40.541mm][Y = 26.724mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1587.4mil|Location2.X=1604.82mil|Location1.Y=1066.757mil|Location2.Y=1084.176mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1587.4mil|Location2.X=1604.82mil|Location1.Y=1066.757mil|Location2.Y=1084.176mil|Absolute=True">Short-Circuit Constraint: Between Track (40.541mm,26.737mm)(40.541mm,27.317mm) on Top Layer And Track (40.541mm,27.317mm)(41.471mm,27.317mm) on Top Layer Location : [X = 40.541mm][Y = 27.317mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.288mil|Location2.X=1640.511mil|Location1.Y=883.03mil|Location2.Y=900.254mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1623.288mil|Location2.X=1640.511mil|Location1.Y=883.03mil|Location2.Y=900.254mil|Absolute=True">Short-Circuit Constraint: Between Track (41.278mm,22.475mm)(41.474mm,22.672mm) on Top Layer And Track (41.474mm,22.672mm)(41.474mm,23.253mm) on Top Layer Location : [X = 41.45mm][Y = 22.648mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1624.268mil|Location2.X=1642.355mil|Location1.Y=906.424mil|Location2.Y=924.51mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1624.268mil|Location2.X=1642.355mil|Location1.Y=906.424mil|Location2.Y=924.51mil|Absolute=True">Short-Circuit Constraint: Between Track (41.474mm,22.672mm)(41.474mm,23.253mm) on Top Layer And Track (41.474mm,23.253mm)(42.084mm,23.253mm) on Top Layer Location : [X = 41.486mm][Y = 23.253mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1625.838mil|Location2.X=1641.81mil|Location1.Y=907.481mil|Location2.Y=923.452mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1625.838mil|Location2.X=1641.81mil|Location1.Y=907.481mil|Location2.Y=923.452mil|Absolute=True">Short-Circuit Constraint: Between Track (41.474mm,22.672mm)(41.474mm,23.253mm) on Top Layer And Track (41.474mm,23.253mm)(42.084mm,23.253mm) on Top Layer Location : [X = 41.499mm][Y = 23.253mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYETNFNSOWENGIS0FYQGSFZJKSMAFVSFXIYDSMGFF2ZRNSIKO2VAL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.11mil|Location2.X=2329.189mil|Location1.Y=952.656mil|Location2.Y=1125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.11mil|Location2.X=2329.189mil|Location1.Y=952.656mil|Location2.Y=1125mil|Absolute=True">Un-Routed Net Constraint: Net NetC4_1 Between Track (40.541mm,25.466mm)(40.541mm,26.737mm) on Top Layer And Via (56.621mm,26.035mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1591.11mil|Location2.X=1601.11mil|Location1.Y=1047.656mil|Location2.Y=1080.467mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1591.11mil|Location2.X=1601.11mil|Location1.Y=1047.656mil|Location2.Y=1080.467mil|Absolute=True">Un-Routed Net Constraint: Track (40.541mm,26.737mm)(40.541mm,27.317mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1626.945mil|Location2.X=1638.755mil|Location1.Y=886.687mil|Location2.Y=921.372mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1626.945mil|Location2.X=1638.755mil|Location1.Y=886.687mil|Location2.Y=921.372mil|Absolute=True">Un-Routed Net Constraint: Track (41.474mm,22.672mm)(41.474mm,23.253mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDXYBRLSOWZT3BLQZIAJVAYMI2AF0ANFVKYQEH1ZI5F5HUK2JCGA5I"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.127mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1607.524mil|Location2.X=1613.774mil|Location1.Y=1071.875mil|Location2.Y=1078.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1607.524mil|Location2.X=1613.774mil|Location1.Y=1071.875mil|Location2.Y=1078.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.053mm &lt; 0.127mm) Between Pad L1-2(40.541mm,27.317mm) on Top Layer And Via (41.483mm,27.305mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.053mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDROIFCFWO13JCCHV3NG0DTTBCKDR3VFRV0PQERHEUP2DQTA1DKKAP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1588.673mil|Location2.X=1609.948mil|Location1.Y=1045.219mil|Location2.Y=1075.602mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1588.673mil|Location2.X=1609.948mil|Location1.Y=1045.219mil|Location2.Y=1075.602mil|Absolute=True">Net Antennae: Track (40.541mm,25.466mm)(40.541mm,26.737mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1625.35mil|Location2.X=1646.762mil|Location1.Y=885.093mil|Location2.Y=915.702mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1625.35mil|Location2.X=1646.762mil|Location1.Y=885.093mil|Location2.Y=915.702mil|Absolute=True">Net Antennae: Track (41.278mm,22.475mm)(41.474mm,22.672mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2204.193mil|Location2.X=2263.693mil|Location1.Y=1000.004mil|Location2.Y=1094.368mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2204.193mil|Location2.X=2263.693mil|Location1.Y=1000.004mil|Location2.Y=1094.368mil|Absolute=True">Net Antennae: Via (56.621mm,26.035mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDJYJN53VJXXQQKLU1R32N4GFDLIHQGCYG4USL1TI0EYRD2II0V53E"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) </th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1573.576mil|Location2.X=1584.826mil|Location1.Y=876.265mil|Location2.Y=887.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1573.576mil|Location2.X=1584.826mil|Location1.Y=876.265mil|Location2.Y=887.515mil|Absolute=True">Component Clearance Constraint: (Collision &lt; 0.254mm) Between SMT Small Component C20-510pF (39.4mm,23.4mm) on Top Layer And SMT Small Component L1-SenseCoil (41.483mm,25.273mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDX2UOVEQZ43DUEU1BURWU0ZUOAPNAIYCAUFTNDBNUWWOSLWBDPLVK"><h2>Waived Violations</h2></a><a name="IDEU4GPSSZVSRYB3JVTIE5HLERLGK3C11FJ0SZP22C452ASNOPWC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Minimum Annular Ring (Minimum=0.13mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1242.879mil|Location2.X=1249.247mil|Location1.Y=919.06mil|Location2.Y=925.428mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1242.879mil|Location2.X=1249.247mil|Location1.Y=919.06mil|Location2.Y=925.428mil|Absolute=True">Minimum Annular Ring: (0.05mm &lt; 0.13mm) Via (31.65mm,23.3mm) from Top Layer to Bottom Layer (Annular Ring=0.05mm) On (Top Layer)</acronym></a><br>Waived by  at 12/1/2023 11:17:56 AM</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1284.218mil|Location2.X=1290.586mil|Location1.Y=869.847mil|Location2.Y=876.215mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1284.218mil|Location2.X=1290.586mil|Location1.Y=869.847mil|Location2.Y=876.215mil|Absolute=True">Minimum Annular Ring: (0.05mm &lt; 0.13mm) Via (32.7mm,22.05mm) from Top Layer to Bottom Layer (Annular Ring=0.05mm) On (Top Layer)</acronym></a><br>Waived by  at 12/1/2023 11:17:56 AM</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1284.218mil|Location2.X=1290.586mil|Location1.Y=968.273mil|Location2.Y=974.641mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1284.218mil|Location2.X=1290.586mil|Location1.Y=968.273mil|Location2.Y=974.641mil|Absolute=True">Minimum Annular Ring: (0.05mm &lt; 0.13mm) Via (32.7mm,24.55mm) from Top Layer to Bottom Layer (Annular Ring=0.05mm) On (Top Layer)</acronym></a><br>Waived by  at 12/1/2023 11:17:56 AM</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1325.303mil|Location2.X=1331.67mil|Location1.Y=919.402mil|Location2.Y=925.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1325.303mil|Location2.X=1331.67mil|Location1.Y=919.402mil|Location2.Y=925.77mil|Absolute=True">Minimum Annular Ring: (0.05mm &lt; 0.13mm) Via (33.744mm,23.309mm) from Top Layer to Bottom Layer (Annular Ring=0.05mm) On (Top Layer)</acronym></a><br>Waived by  at 12/1/2023 11:17:56 AM</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDQ1Y2TL4TGQCMEUPYICONLQKHPJVUM12YHU4ZRPHQPTDNRTAJKNOP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Minimum Solder Mask Sliver (Gap=0.127mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=381.836mil|Location2.X=388.086mil|Location1.Y=796.836mil|Location2.Y=803.086mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=381.836mil|Location2.X=388.086mil|Location1.Y=796.836mil|Location2.Y=803.086mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.116mm &lt; 0.127mm) Between Pad C10-2(10.299mm,20.34mm) on Top Layer And Via (9.332mm,20.319mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.116mm]</acronym></a><br>Waived by  at 12/1/2023 11:17:56 AM</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

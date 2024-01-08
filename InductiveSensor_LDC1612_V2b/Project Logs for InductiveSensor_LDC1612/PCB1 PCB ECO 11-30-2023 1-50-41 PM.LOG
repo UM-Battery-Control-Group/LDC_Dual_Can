@@ -1,0 +1,74 @@
+Removed Pin From Net: NetName=NetR5_1 Pin=R5-1
+Removed Pin From Net: NetName=NetR6_1 Pin=TP21-1
+Removed Pin From Net: NetName=GND Pin=TP22-1
+Removed Pin From Net: NetName=NetR5_1 Pin=TP23-1
+Removed Pin From Net: NetName=VDD Pin=TP24-1
+Removed Pin From Net: NetName=NetJ2_2 Pin=TP25-1
+Removed Pin From Net: NetName=NetJ2_1 Pin=TP27-1
+Removed Pin From Net: NetName=NetC13_1 Pin=TP28-1
+Removed Pin From Net: NetName=VDD Pin=TP29-1
+Removed Pin From Net: NetName=NetC15_1 Pin=TP30-1
+Removed Pin From Net: NetName=GND Pin=TP31-1
+Removed Pin From Net: NetName=VDD Pin=TP32-1
+Removed Member From Class: ClassName=CAN_TxRx Member=TP21
+Removed Member From Class: ClassName=CAN_TxRx Member=TP22
+Removed Member From Class: ClassName=CAN_TxRx Member=TP23
+Removed Member From Class: ClassName=CAN_TxRx Member=TP24
+Removed Member From Class: ClassName=CAN_TxRx Member=TP25
+Removed Member From Class: ClassName=CAN_TxRx Member=TP27
+Removed Member From Class: ClassName=PowerReg Member=TP28
+Removed Member From Class: ClassName=PowerReg Member=TP29
+Removed Member From Class: ClassName=PowerReg Member=TP30
+Removed Member From Class: ClassName=PowerReg Member=TP31
+Removed Member From Class: ClassName=HumTempSensor Member=TP32
+Added Component: Designator=J3(87898-0204_MOL)
+Add component (AddParameter): Name = "Category"; Value = "Headers and Wire Housings"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://datasheet.ciiva.com/5161/0878980204-pcb-headers-176698-5161963.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://datasheet.ciiva.com/5161/0878980204-pcb-headers-176698-5161963.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "https://datasheet.ciiva.com/16109/978120878980204-pcb-headers-16109649.pdf?src-supplier=Onlinecomponents.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://datasheet.ciiva.com/16109/978120878980204-pcb-headers-16109649.pdf?src-supplier=Onlinecomponents.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "https://datasheet.ciiva.com/30116/0878980204-pcb-headers-30116283.pdf?src-supplier=Onlinecomponents.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "https://datasheet.ciiva.com/30116/0878980204-pcb-headers-30116283.pdf?src-supplier=Onlinecomponents.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Gender"; Value = "Male"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Material"; Value = "Copper Alloy"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Mating Length"; Value = "5.84mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2023 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Male"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Material"; Value = "Nylon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "87898-0204"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "878980204"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Molex Connector Corporation"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Contacts"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Straight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing"; Value = "1=0.68, 10=0.57, 80=0.4435, 945=0.34847, 7200=0.30623, 14400=0.28088 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "87898"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock"; Value = "21020"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number"; Value = "WM9852-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "250V"; VariantName = "[No Variations]"
+Added Component: Designator=TP1(TP_1MM)
+Added Pin To Net: NetName=NetR5_1 Pin=J3-2
+Added Pin To Net: NetName=NetC4_1 Pin=L1-1
+Added Pin To Net: NetName=NetC4_1 Pin=L1-1
+Added Pin To Net: NetName=GND Pin=TP1-1
+Change Net Name : Old Net Name=NetR5_1 New Net Name=NetJ3_2
+Added Pin To Net: NetName=NetJ3_1 Pin=J3-1
+Added Pin To Net: NetName=NetJ3_1 Pin=R5-1
+Added Net: Name=NetJ3_1
+Added Member To Class: ClassName=CAN_TxRx Member=Component J3 2Pin SMD Header V
+Added Member To Class: ClassName=PowerReg Member=Component TP1 1mm Test Point

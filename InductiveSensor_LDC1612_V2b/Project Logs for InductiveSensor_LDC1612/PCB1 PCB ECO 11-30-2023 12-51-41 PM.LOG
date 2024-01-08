@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=NetC4_1 Pin=TP7-1
+Removed Pin From Net: NetName=NetC3_1 Pin=TP8-1
+Removed Member From Class: ClassName=Sense_LDC1612 Member=TP7
+Removed Member From Class: ClassName=Sense_LDC1612 Member=TP8
+Added Pin To Net: NetName=NetC4_1 Pin=L1-1
+Added Pin To Net: NetName=NetC4_1 Pin=L1-1

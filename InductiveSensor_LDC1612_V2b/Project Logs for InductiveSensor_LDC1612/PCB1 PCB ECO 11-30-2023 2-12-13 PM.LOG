@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=GND Pin=TP10-1
+Removed Pin From Net: NetName=VDD Pin=TP11-1
+Removed Pin From Net: NetName=GND Pin=TP18-1
+Removed Pin From Net: NetName=VDD Pin=TP19-1
+Removed Member From Class: ClassName=Sense_LDC1612 Member=TP10
+Removed Member From Class: ClassName=Sense_LDC1612 Member=TP11
+Removed Member From Class: ClassName=Microcontroller_STM32F04 Member=TP18
+Removed Member From Class: ClassName=Microcontroller_STM32F04 Member=TP19
+Added Pin To Net: NetName=NetC4_1 Pin=L1-1
+Added Pin To Net: NetName=NetC4_1 Pin=L1-1

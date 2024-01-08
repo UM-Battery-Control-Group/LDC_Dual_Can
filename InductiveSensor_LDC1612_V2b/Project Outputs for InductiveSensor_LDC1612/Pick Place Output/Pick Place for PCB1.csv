@@ -1,0 +1,67 @@
+Altium Designer Pick and Place Locations
+\\engin-labs.m.storage.umich.edu\siegeljb\windat.V2\Documents\InductiveSensor_LDC1612_V2b\Project Outputs for InductiveSensor_LDC1612\Pick Place Output\Pick Place for PCB1.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       18/12/23
+Time:       22:59
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+"Designator","Center-X(mil)","Center-Y(mil)","Layer","Rotation","Comment","Footprint","Description"
+"C1","1285.433","748.032","TopLayer","0","10uF","CAP1206_TAJA","Cap Tant Solid 10uF 16V A CASE 10%( 3.2 X 1.6 X 1.6mm) Inward L SMD 3216-18 3 Ohm 125C T/R"
+"C2","1347.913","1389.567","TopLayer","180","1uF","CAP0805","Multilayer Ceramic Capacitor, 1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"
+"C3","1460.630","834.646","TopLayer","270","18pF","CAP0805","0805 18 pF 50 V ±5 % Tolerance C0G/NP0 SMT Multilayer Ceramic Chip Capacitor"
+"C4","1456.693","992.126","TopLayer","90","18pF","CAP0805","0805 18 pF 50 V ±5 % Tolerance C0G/NP0 SMT Multilayer Ceramic Chip Capacitor"
+"C5","1346.102","1309.724","TopLayer","180","100nF","CAP0805","Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"
+"C6","570.866","748.032","TopLayer","0","20pF","C0603","Multilayer Ceramic Capacitor, 20 pF, 50 V, ± 5%, C0G (NP0), 0603 [1608 Metric]"
+"C7","562.992","413.386","TopLayer","0","20pF","C0603","Multilayer Ceramic Capacitor, 20 pF, 50 V, ± 5%, C0G (NP0), 0603 [1608 Metric]"
+"C8","524.921","309.842","TopLayer","270","100nF","CAP0805","Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"
+"C9","611.221","309.685","TopLayer","270","100nF","CAP0805","Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"
+"C10","441.890","800.787","TopLayer","180","100nF","CAP0805","Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"
+"C11","389.961","689.134","TopLayer","90","100nF","CAP0805","Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"
+"C12","480.315","1358.268","TopLayer","0","4.7nF","C0603","Cap Cer 0603 4.7NF 100VDC X8G"
+"C13","361.693","1767.520","TopLayer","90","10uF","CAP1206_TAJA","Cap Tant Solid 10uF 16V A CASE 10%( 3.2 X 1.6 X 1.6mm) Inward L SMD 3216-18 3 Ohm 125C T/R"
+"C14","714.370","1746.299","TopLayer","270","4.7uF","CAP0805","Multilayer Ceramic Capacitor, 4.7 uF, 25 V, ± 10%, X5R, 0805 [2012 Metric]"
+"C15","536.260","1881.260","TopLayer","0","100nF","CAP0805","Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"
+"C16","1519.685","425.197","TopLayer","90","100nF","CAP0805","Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"
+"C17","1468.504","1649.606","TopLayer","0","18pF","CAP0805","0805 18 pF 50 V ±5 % Tolerance C0G/NP0 SMT Multilayer Ceramic Chip Capacitor"
+"C18","1165.354","1649.606","TopLayer","180","18pF","CAP0805","0805 18 pF 50 V ±5 % Tolerance C0G/NP0 SMT Multilayer Ceramic Chip Capacitor"
+"C20","1551.181","921.260","TopLayer","90","510pF","CAP0805","0805 510 pF 50 V ±5 % Tolerance NP0 SMT Multilayer Ceramic Capacitor"
+"CR1","1389.764","145.669","TopLayer","180","GRN","LED_VISHAY_VLMX1300_VIS","LED Uni-Color Yellow Green 574nm 2-Pin Chip 0603(1608Metric) T/R"
+"CR2","1389.764","220.472","TopLayer","180","RED","LED_VISHAY_VLMX1300_VIS","LED RED 0603 SMD"
+"D1","574.803","149.606","TopLayer","270","CUS10S30,H3F","USC_TOS","Rectifier Diode, Schottky, 1 Phase, 1 Element, 1A, 30V V(RRM), Silicon"
+"D2","448.819","149.606","TopLayer","270","CUS10S30,H3F","USC_TOS","Rectifier Diode, Schottky, 1 Phase, 1 Element, 1A, 30V V(RRM), Silicon"
+"FID1","151.575","157.480","TopLayer","90","Fiducial","FID",""
+"FID2","3153.543","157.480","TopLayer","90","Fiducial","FID",""
+"FID3","152.638","1926.417","TopLayer","90","Fiducial","FID",""
+"J1","895.472","187.651","TopLayer","0","TSM-104-01-T-SV","CONN_TSM-104-01-T-SV_SAI","Conn Unshrouded Header HDR 4 POS 2.54mm Solder ST Top Entry SMD Tube"
+"L1","1614.480","995.467","TopLayer","0","SenseCoil","COIL_4L",""
+"Q1","1346.457","1181.102","TopLayer","270","40MHz","KC2520Z_KYO","Xtal Osc Xo 40.0000MHZ Cmos SMD"
+"R1","952.756","1043.307","TopLayer","270","4.7k","RES0805","Res Thick Film 0805 4.7K Ohm 5% 1/8W ±200ppm/°C Molded SMD Punched Carrier T/R"
+"R2","1062.992","1043.307","TopLayer","270","4.7k","RES0805","Res Thick Film 0805 4.7K Ohm 5% 1/8W ±200ppm/°C Molded SMD Punched Carrier T/R"
+"R3","1275.591","145.669","TopLayer","0","330R","R0603","Res Thick Film 0603 330 Ohm 5% 0.1W(1/10W) ±100ppm/C Pad SMD T/R"
+"R4","1275.591","208.661","TopLayer","0","330R","R0603","Res Thick Film 0603 330 Ohm 5% 0.1W(1/10W) ±100ppm/C Pad SMD T/R"
+"R5","519.252","1267.047","TopLayer","90","60.4R","R0603","Res Thick Film 0603 60.4 Ohm 1% 0.1W(1/10W) ±100ppm/C Pad SMD T/R"
+"R6","299.213","1070.866","TopLayer","270","10k","R0603","SMD Chip Resistor, 10 kOhm, ± 5%, 100 mW, 0603 [1608 Metric], Thick Film, General Purpose"
+"R7","437.284","1265.709","TopLayer","270","60.4R","R0603","Res Thick Film 0603 60.4 Ohm 1% 0.1W(1/10W) ±100ppm/C Pad SMD T/R"
+"SW1","846.457","1307.087","TopLayer","90","CS-4-22YB","CS-4-22YB_NDC","Switch Rotary ON OFF ON DPDT 2 Flush Screwdriver Gull Wing 0.1A 16VAC 16VDC 0.5VA T/R"
+"TP1","330.709","433.071","TopLayer","90","1mm Test Point","TP_1MM",""
+"TP2","1153.543","440.945","TopLayer","90","1mm Test Point","TP_1MM",""
+"TP6","1267.716","1086.614","TopLayer","90","1mm Test Point","TP_1MM",""
+"TP9","1100.039","803.150","TopLayer","90","1mm Test Point","TP_1MM",""
+"TP14","444.882","586.614","TopLayer","90","1mm Test Point","TP_1MM",""
+"TP15","437.008","515.748","TopLayer","90","1mm Test Point","TP_1MM",""
+"TP20","778.701","838.543","TopLayer","90","1mm Test Point","TP_1MM",""
+"TP26","890.984","841.102","TopLayer","90","1mm Test Point","TP_1MM",""
+"U1","1287.402","917.323","TopLayer","0","Inductive Sensor 2Ch","LDC1612","2-Ch, 28-bit, high-resolution Inductance to digital converter 12-WSON -40 to 125"
+"U2","883.858","544.016","TopLayer","0","STM32F042K6T7","LQFP-32","ARM® Cortex®-M0 STM32 F0 Microcontroller IC 32-Bit 48MHz 32KB (32K x 8) FLASH 32-LQFP (7x7)"
+"U3","438.543","999.173","TopLayer","90","SN65HVD230DR","SOIC_8","EAR99 65HVD230 Cut Tape (CT) CANbus interface driver 3.3V 17mA 72.603129mg 1Mbps"
+"U4","529.409","1745.827","TopLayer","180","3.3V/1A","VSON_DRB8","Automotive 1-A, ultra-low-dropout voltage regulator with reverse current protection & enable"
+"U5","1374.016","370.079","TopLayer","0","I2C Humidity/Temp Sensor","WSON_DMB6","SENSOR HUMI/TEMP 3.3V I2C 4% SMD"
+"X1","1314.961","1895.669","TopLayer","180","2P Pico-Clasp","CON_2023960207","Conn Shrouded Header (4 Sides) HDR 2 POS 1mm Solder RA Side Entry SMD Pico-Clasp™ T/R"
+"X2","178.701","727.323","TopLayer","270","4P Pico-clasp","CON_2023960407","Conn Shrouded Header (4 Sides) HDR 4 POS 1mm Solder RA SMD Pico-Clasp™ T/R"
+"X3","183.701","1301.732","TopLayer","270","4P Pico-clasp","CON_2023960407","Conn Shrouded Header (4 Sides) HDR 4 POS 1mm Solder RA SMD Pico-Clasp™ T/R"
+"XTAL1","563.465","588.465","TopLayer","90","XC53G2-8.000-F12NJHPK","XTAL_NX5032_NDK","CRYSTAL 8MHZ 12PF SMD"

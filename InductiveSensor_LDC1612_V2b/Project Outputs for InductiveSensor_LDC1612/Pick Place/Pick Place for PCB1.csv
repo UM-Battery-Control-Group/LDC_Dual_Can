@@ -1,0 +1,68 @@
+Altium Designer Pick and Place Locations
+\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\Project Outputs for InductiveSensor_LDC1612\Pick Place\Pick Place for PCB1.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       18/12/23
+Time:       15:47
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+"Designator","Center-X(mm)","Center-Y(mm)","Layer","Rotation"
+"L1","41.0078mm","25.2849mm","TopLayer","0"
+"C20","39.4000mm","23.4000mm","TopLayer","90"
+"C19","33.5000mm","41.9000mm","TopLayer","180"
+"TP2","29.3000mm","11.2000mm","TopLayer","90"
+"D2","11.4000mm","3.8000mm","TopLayer","270"
+"D1","14.6000mm","3.8000mm","TopLayer","270"
+"SW1","21.5000mm","33.2000mm","TopLayer","90"
+"C18","29.6000mm","41.9000mm","TopLayer","180"
+"C17","37.3000mm","41.9000mm","TopLayer","0"
+"TP1","8.4000mm","11.0000mm","TopLayer","90"
+"XTAL1","14.3120mm","14.9470mm","TopLayer","90"
+"X3","4.6660mm","33.0640mm","TopLayer","270"
+"X2","4.5390mm","18.4740mm","TopLayer","270"
+"X1","33.4000mm","48.1500mm","TopLayer","180"
+"U5","34.9000mm","9.4000mm","TopLayer","0"
+"U4","13.4470mm","44.3440mm","TopLayer","180"
+"U3","11.1390mm","25.3790mm","TopLayer","90"
+"U2","22.4500mm","13.8180mm","TopLayer","0"
+"U1","32.7000mm","23.3000mm","TopLayer","0"
+"TP26","22.6310mm","21.3640mm","TopLayer","90"
+"TP20","19.7790mm","21.2990mm","TopLayer","90"
+"TP15","11.1000mm","13.1000mm","TopLayer","90"
+"TP14","11.3000mm","14.9000mm","TopLayer","90"
+"TP9","27.9410mm","20.4000mm","TopLayer","90"
+"TP6","32.2000mm","27.6000mm","TopLayer","90"
+"R7","11.1070mm","32.1490mm","TopLayer","270"
+"R6","7.6000mm","27.2000mm","TopLayer","270"
+"R5","13.1890mm","32.1830mm","TopLayer","90"
+"R4","32.4000mm","5.3000mm","TopLayer","0"
+"R3","32.4000mm","3.7000mm","TopLayer","0"
+"R2","27.0000mm","26.5000mm","TopLayer","270"
+"R1","24.2000mm","26.5000mm","TopLayer","270"
+"Q1","34.2000mm","30.0000mm","TopLayer","270"
+"J1","22.7450mm","4.7663mm","TopLayer","0"
+"FID3","3.8770mm","48.9310mm","TopLayer","90"
+"FID2","80.1000mm","4.0000mm","TopLayer","90"
+"FID1","3.8500mm","4.0000mm","TopLayer","90"
+"CR2","35.3000mm","5.6000mm","TopLayer","180"
+"CR1","35.3000mm","3.7000mm","TopLayer","180"
+"C16","38.3000mm","9.8000mm","TopLayer","90"
+"C15","13.6210mm","47.7840mm","TopLayer","0"
+"C14","18.1450mm","44.3560mm","TopLayer","270"
+"C13","9.1870mm","44.8950mm","TopLayer","90"
+"C12","12.2000mm","34.5000mm","TopLayer","0"
+"C11","9.9050mm","17.5040mm","TopLayer","90"
+"C10","11.2240mm","20.3400mm","TopLayer","180"
+"C9","15.5250mm","7.8660mm","TopLayer","270"
+"C8","13.3330mm","7.8700mm","TopLayer","270"
+"C7","14.3000mm","10.5000mm","TopLayer","0"
+"C6","14.5000mm","19.0000mm","TopLayer","0"
+"C5","34.1910mm","33.2670mm","TopLayer","180"
+"C4","37.0000mm","25.2000mm","TopLayer","90"
+"C3","37.1000mm","21.2000mm","TopLayer","270"
+"C2","34.2370mm","35.2950mm","TopLayer","180"
+"C1","32.6500mm","19.0000mm","TopLayer","0"

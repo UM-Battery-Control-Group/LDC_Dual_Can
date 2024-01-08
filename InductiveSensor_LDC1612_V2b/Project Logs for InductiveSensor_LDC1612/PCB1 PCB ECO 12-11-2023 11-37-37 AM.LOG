@@ -1,0 +1,6 @@
+Change Component Designator: OldDesignator=SW? NewDesignator=SW1
+Added Pin To Net: NetName=NetC4_1 Pin=L1-1
+Added Pin To Net: NetName=NetC4_1 Pin=L1-1
+Change Net Name : Old Net Name=NetSW?_2 New Net Name=NetSW1_2
+Change Net Name : Old Net Name=NetSW?_5 New Net Name=NetSW1_5
+Change Class Name : Old Net Name=CAN_TxRx_v1 New Net Name=CAN_TxRx

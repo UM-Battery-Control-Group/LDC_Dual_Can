@@ -1,0 +1,10 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [[No Variations]] of Project [InductiveSensor_LDC1612.PrjPcb]
+   Generated File[Pick Place for Coil_only_PCB1.csv]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 10:52:38 AM On 12/19/2023

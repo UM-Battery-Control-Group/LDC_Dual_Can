@@ -1,0 +1,68 @@
+Altium Designer Pick and Place Locations
+\\engin-labs.m.storage.umich.edu\yatirajr\windat.v2\Desktop\Altium Designer\InductiveSensor\InductiveSensor_LDC1612\Project Outputs for InductiveSensor_LDC1612\Pick Place\Pick Place for PCB1.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       18/12/23
+Time:       15:47
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment                    Layer    Footprint                Center-X(mil) Center-Y(mil) Rotation Description                                                                                    
+L1         SenseCoil                  TopLayer COIL_4L                  1614.480      995.467       0        ""                                                                                             
+C20        510pF                      TopLayer CAP0805                  1551.181      921.260       90       "0805 510 pF 50 V ±5 % Tolerance NP0 SMT Multilayer Ceramic Capacitor"                         
+C19        510pF                      TopLayer CAP0805                  1318.898      1649.606      180      "0805 510 pF 50 V ±5 % Tolerance NP0 SMT Multilayer Ceramic Capacitor"                         
+TP2        "1mm Test Point"           TopLayer TP_1MM                   1153.543      440.945       90       ""                                                                                             
+D2         CUS10S30,H3F               TopLayer USC_TOS                  448.819       149.606       270      "Rectifier Diode, Schottky, 1 Phase, 1 Element, 1A, 30V V(RRM), Silicon"                       
+D1         CUS10S30,H3F               TopLayer USC_TOS                  574.803       149.606       270      "Rectifier Diode, Schottky, 1 Phase, 1 Element, 1A, 30V V(RRM), Silicon"                       
+SW1        CS-4-22YB                  TopLayer CS-4-22YB_NDC            846.457       1307.087      90       "Switch Rotary ON OFF ON DPDT 2 Flush Screwdriver Gull Wing 0.1A 16VAC 16VDC 0.5VA T/R"        
+C18        18pF                       TopLayer CAP0805                  1165.354      1649.606      180      "0805 18 pF 50 V ±5 % Tolerance C0G/NP0 SMT Multilayer Ceramic Chip Capacitor"                 
+C17        18pF                       TopLayer CAP0805                  1468.504      1649.606      0        "0805 18 pF 50 V ±5 % Tolerance C0G/NP0 SMT Multilayer Ceramic Chip Capacitor"                 
+TP1        "1mm Test Point"           TopLayer TP_1MM                   330.709       433.071       90       ""                                                                                             
+XTAL1      XC53G2-8.000-F12NJHPK      TopLayer XTAL_NX5032_NDK          563.465       588.465       90       "CRYSTAL 8MHZ 12PF SMD"                                                                        
+X3         "4P Pico-clasp"            TopLayer CON_2023960407           183.701       1301.732      270      "Conn Shrouded Header (4 Sides) HDR 4 POS 1mm Solder RA SMD Pico-Clasp™ T/R"                   
+X2         "4P Pico-clasp"            TopLayer CON_2023960407           178.701       727.323       270      "Conn Shrouded Header (4 Sides) HDR 4 POS 1mm Solder RA SMD Pico-Clasp™ T/R"                   
+X1         "2P Pico-Clasp"            TopLayer CON_2023960207           1314.961      1895.669      180      "Conn Shrouded Header (4 Sides) HDR 2 POS 1mm Solder RA Side Entry SMD Pico-Clasp™ T/R"        
+U5         "I2C Humidity/Temp Sensor" TopLayer WSON_DMB6                1374.016      370.079       0        "SENSOR HUMI/TEMP 3.3V I2C 4% SMD"                                                             
+U4         3.3V/1A                    TopLayer VSON_DRB8                529.409       1745.827      180      "Automotive 1-A, ultra-low-dropout voltage regulator with reverse current protection & enable" 
+U3         SN65HVD230DR               TopLayer SOIC_8                   438.543       999.173       90       "EAR99 65HVD230 Cut Tape (CT) CANbus interface driver 3.3V 17mA 72.603129mg 1Mbps"             
+U2         STM32F042K6T7              TopLayer LQFP-32                  883.858       544.016       0        "ARM® Cortex®-M0 STM32 F0 Microcontroller IC 32-Bit 48MHz 32KB (32K x 8) FLASH 32-LQFP (7x7)"  
+U1         "Inductive Sensor 2Ch"     TopLayer LDC1612                  1287.402      917.323       0        "2-Ch, 28-bit, high-resolution Inductance to digital converter 12-WSON -40 to 125"             
+TP26       "1mm Test Point"           TopLayer TP_1MM                   890.984       841.102       90       ""                                                                                             
+TP20       "1mm Test Point"           TopLayer TP_1MM                   778.701       838.543       90       ""                                                                                             
+TP15       "1mm Test Point"           TopLayer TP_1MM                   437.008       515.748       90       ""                                                                                             
+TP14       "1mm Test Point"           TopLayer TP_1MM                   444.882       586.614       90       ""                                                                                             
+TP9        "1mm Test Point"           TopLayer TP_1MM                   1100.039      803.150       90       ""                                                                                             
+TP6        "1mm Test Point"           TopLayer TP_1MM                   1267.716      1086.614      90       ""                                                                                             
+R7         60.4R                      TopLayer R0603                    437.284       1265.709      270      "Res Thick Film 0603 60.4 Ohm 1% 0.1W(1/10W) ±100ppm/C Pad SMD T/R"                            
+R6         10k                        TopLayer R0603                    299.213       1070.866      270      "SMD Chip Resistor, 10 kOhm, ± 5%, 100 mW, 0603 [1608 Metric], Thick Film, General Purpose"    
+R5         60.4R                      TopLayer R0603                    519.252       1267.047      90       "Res Thick Film 0603 60.4 Ohm 1% 0.1W(1/10W) ±100ppm/C Pad SMD T/R"                            
+R4         330R                       TopLayer R0603                    1275.591      208.661       0        "Res Thick Film 0603 330 Ohm 5% 0.1W(1/10W) ±100ppm/C Pad SMD T/R"                             
+R3         330R                       TopLayer R0603                    1275.591      145.669       0        "Res Thick Film 0603 330 Ohm 5% 0.1W(1/10W) ±100ppm/C Pad SMD T/R"                             
+R2         4.7k                       TopLayer RES0805                  1062.992      1043.307      270      "Res Thick Film 0805 4.7K Ohm 5% 1/8W ±200ppm/°C Molded SMD Punched Carrier T/R"               
+R1         4.7k                       TopLayer RES0805                  952.756       1043.307      270      "Res Thick Film 0805 4.7K Ohm 5% 1/8W ±200ppm/°C Molded SMD Punched Carrier T/R"               
+Q1         40MHz                      TopLayer KC2520Z_KYO              1346.457      1181.102      270      "Xtal Osc Xo 40.0000MHZ Cmos SMD"                                                              
+J1         TSM-104-01-T-SV            TopLayer CONN_TSM-104-01-T-SV_SAI 895.472       187.651       0        "Conn Unshrouded Header HDR 4 POS 2.54mm Solder ST Top Entry SMD Tube"                         
+FID3       Fiducial                   TopLayer FID                      152.638       1926.417      90       ""                                                                                             
+FID2       Fiducial                   TopLayer FID                      3153.543      157.480       90       ""                                                                                             
+FID1       Fiducial                   TopLayer FID                      151.575       157.480       90       ""                                                                                             
+CR2        RED                        TopLayer LED_VISHAY_VLMX1300_VIS  1389.764      220.472       180      "LED RED 0603 SMD"                                                                             
+CR1        GRN                        TopLayer LED_VISHAY_VLMX1300_VIS  1389.764      145.669       180      "LED Uni-Color Yellow Green 574nm 2-Pin Chip 0603(1608Metric) T/R"                             
+C16        100nF                      TopLayer CAP0805                  1507.874      385.827       90       "Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"                   
+C15        100nF                      TopLayer CAP0805                  536.260       1881.260      0        "Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"                   
+C14        4.7uF                      TopLayer CAP0805                  714.370       1746.299      270      "Multilayer Ceramic Capacitor, 4.7 uF, 25 V, ± 10%, X5R, 0805 [2012 Metric]"                   
+C13        10uF                       TopLayer CAP1206_TAJA             361.693       1767.520      90       "Cap Tant Solid 10uF 16V A CASE 10%( 3.2 X 1.6 X 1.6mm) Inward L SMD 3216-18 3 Ohm 125C T/R"   
+C12        4.7nF                      TopLayer C0603                    480.315       1358.268      0        "Cap Cer 0603 4.7NF 100VDC X8G"                                                                
+C11        100nF                      TopLayer CAP0805                  389.961       689.134       90       "Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"                   
+C10        100nF                      TopLayer CAP0805                  441.890       800.787       180      "Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"                   
+C9         100nF                      TopLayer CAP0805                  611.221       309.685       270      "Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"                   
+C8         100nF                      TopLayer CAP0805                  524.921       309.842       270      "Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"                   
+C7         20pF                       TopLayer C0603                    562.992       413.386       0        "Multilayer Ceramic Capacitor, 20 pF, 50 V, ± 5%, C0G (NP0), 0603 [1608 Metric]"               
+C6         20pF                       TopLayer C0603                    570.866       748.032       0        "Multilayer Ceramic Capacitor, 20 pF, 50 V, ± 5%, C0G (NP0), 0603 [1608 Metric]"               
+C5         100nF                      TopLayer CAP0805                  1346.102      1309.724      180      "Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"                   
+C4         18pF                       TopLayer CAP0805                  1456.693      992.126       90       "0805 18 pF 50 V ±5 % Tolerance C0G/NP0 SMT Multilayer Ceramic Chip Capacitor"                 
+C3         18pF                       TopLayer CAP0805                  1460.630      834.646       270      "0805 18 pF 50 V ±5 % Tolerance C0G/NP0 SMT Multilayer Ceramic Chip Capacitor"                 
+C2         1uF                        TopLayer CAP0805                  1347.913      1389.567      180      "Multilayer Ceramic Capacitor, 1 uF, 50 V, ± 10%, X7R, 0805 [2012 Metric]"                     
+C1         10uF                       TopLayer CAP1206_TAJA             1285.433      748.032       0        "Cap Tant Solid 10uF 16V A CASE 10%( 3.2 X 1.6 X 1.6mm) Inward L SMD 3216-18 3 Ohm 125C T/R"   

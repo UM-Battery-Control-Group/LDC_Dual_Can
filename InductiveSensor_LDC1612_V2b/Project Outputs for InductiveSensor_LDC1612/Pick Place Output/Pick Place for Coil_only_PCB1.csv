@@ -1,0 +1,17 @@
+Altium Designer Pick and Place Locations
+\\engin-labs.m.storage.umich.edu\siegeljb\windat.V2\Documents\InductiveSensor_LDC1612_V2b\Project Outputs for InductiveSensor_LDC1612\Pick Place Output\Pick Place for Coil_only_PCB1.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       19/12/23
+Time:       10:52
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+"Designator","Center-X(mil)","Center-Y(mil)","Layer","Rotation","Comment","Footprint","Description"
+"C20","330.709","996.063","TopLayer","90","510pF","CAP0805","0805 510 pF 50 V ±5 % Tolerance NP0 SMT Multilayer Ceramic Capacitor"
+"FID2","1944.882","157.480","TopLayer","90","Fiducial","FID",""
+"L1","405.819","995.467","TopLayer","0","SenseCoil","COIL_4L",""
+"X1","163.386","996.063","TopLayer","270","2P Pico-Clasp","CON_2023960207","Conn Shrouded Header (4 Sides) HDR 2 POS 1mm Solder RA Side Entry SMD Pico-Clasp™ T/R"
