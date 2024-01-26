@@ -10,3 +10,17 @@
  LDC1614_Fsensor = 1 / (2 * 3.14 * sqrt(LDC1614_inductance * LDC1614_capacitance * 10^ -18)) *(10^ -6)
 
  FIN_DIV = (LDC1614_Fsensor / 8.75 + 1);
+
+
+
+ %36 TURNS
+
+   LDC1614_resistance = 64.04;
+   LDC1614_inductance = 470;
+
+   LDC1614_capacitance = 200;
+
+   LDC1614_Q_factor = 41;
+ LDC1614_Fsensor = 1 / (2 * 3.14 * sqrt(LDC1614_inductance * LDC1614_capacitance * 10^ -18)) *(10^ -6)
+
+ FIN_DIV = (LDC1614_Fsensor / 8.75 + 1);

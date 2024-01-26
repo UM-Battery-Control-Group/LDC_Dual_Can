@@ -105,6 +105,7 @@ s32 LDC1614_mutiple_channel_config() {
 	//LDC1614_set_conversion_time(i, 0xF000);//10.14 Hz 61440
 	LDC1614_set_conversion_time(i, 0xF220);//10 Hz
 	//LDC1614_set_conversion_time(i, 0x78Ef);//20 Hz
+// 0x0005-0xFFFF: Conversion Time (tC1)= (RCOUNT1×16)/ƒREF1
 
     /*Set driver current!*/
 	LDC1614_set_driver_current(i, drive_current_to_hex(drivecurrent[i]) ); //0x7000 14 b01110 127uA 7.42-11.2 Kohm sensor RP
