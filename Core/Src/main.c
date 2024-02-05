@@ -399,15 +399,19 @@ int main(void)
   LDC1614_reset_sensor();
   HAL_CAN_ConfigFilter(&hcan,&canfil); //Initialize CAN Filter
   HAL_CAN_Start(&hcan); //Initialize CAN Bus
-  HAL_CAN_ActivateNotification(&hcan,CAN_IT_RX_FIFO0_MSG_PENDING);// Initialize CAN Bus Rx Interrupt
+ // HAL_CAN_ActivateNotification(&hcan,CAN_IT_RX_FIFO0_MSG_PENDING);// Initialize CAN Bus Rx Interrupt
 
   LDC1614_mutiple_channel_config();
+
 
     hdc1080_measureRH(&RH_raw);
     hdc1080_measureT(& T_raw);
     // READ_MANUFACTURER_ID
   // reading the Manuf ID Works.
      IIC_read_16bit(READ_MANUFACTURER_ID, &T_raw);
+ //   while (1)
+ // {
+ //   T_raw+=10;
      mycandata.stmp[0]=T_raw;
      mycandata.stmp[1]=T_raw>>8;
      mycandata.stmp[2]=0;
@@ -419,8 +423,11 @@ int main(void)
 
      //txHeader.StdId = Base_Can_address;
      while(HAL_CAN_GetTxMailboxesFreeLevel(&hcan) != 3) {} // wait for a free mailbox.
-     HAL_CAN_AddTxMessage(&hcan,&txHeader,mycandata.stmp,&canMailbox); // Send Message
+     RH_raw=HAL_CAN_AddTxMessage(&hcan,&txHeader,mycandata.stmp,&canMailbox); // Send Message
 
+	 HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
+     HAL_Delay(100);
+  //}
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -437,6 +444,7 @@ int main(void)
 			 // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
 		  }
 
+	  // this code should no longer be needed siegeljb Feb 2 2024
 		  if(__HAL_TIM_GET_COUNTER(&htim2)-Last_Time> 160000){ // should be 120ms  //10ms per tick
 	//Last_Time=__HAL_TIM_GET_COUNTER(&htim2)
 			  //HAL_GPIO_EXTI_Callback(9);
@@ -776,8 +784,8 @@ static void MX_CAN_Init(void)
   hcan.Init.TimeSeg1 = CAN_BS1_13TQ;
   hcan.Init.TimeSeg2 = CAN_BS2_2TQ;
   hcan.Init.TimeTriggeredMode = DISABLE;
-  hcan.Init.AutoBusOff = DISABLE;
-  hcan.Init.AutoWakeUp = DISABLE;
+  hcan.Init.AutoBusOff = ENABLE;
+  hcan.Init.AutoWakeUp = ENABLE;
   hcan.Init.AutoRetransmission = DISABLE;
   hcan.Init.ReceiveFifoLocked = DISABLE;
   hcan.Init.TransmitFifoPriority = DISABLE;
@@ -912,6 +920,7 @@ static void MX_TIM3_Init(void)
 
   TIM_ClockConfigTypeDef sClockSourceConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
 
   /* USER CODE BEGIN TIM3_Init 1 */
 
@@ -931,15 +940,28 @@ static void MX_TIM3_Init(void)
   {
     Error_Handler();
   }
+  if (HAL_TIM_OC_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
   sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
   if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
   {
     Error_Handler();
   }
+  sConfigOC.OCMode = TIM_OCMODE_TIMING;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_OC_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
   /* USER CODE BEGIN TIM3_Init 2 */
 
   /* USER CODE END TIM3_Init 2 */
+  HAL_TIM_MspPostInit(&htim3);
 
 }
 
@@ -957,6 +979,7 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_RESET);
