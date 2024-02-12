@@ -103,7 +103,9 @@ s32 LDC1614_mutiple_channel_config() {
     /*Set conversion interval time 20 SPS should give 0.05um resolution*/
 	//LDC1614_set_conversion_time(i, 0xF474);//9.96Hz  62580
 	//LDC1614_set_conversion_time(i, 0xF000);//10.14 Hz 61440
-	LDC1614_set_conversion_time(i, 0xF220);//10 Hz
+//TSAMPLE – settling time – channel switching delay = 1000 – 8 – 1 = 991 µs
+	// 40,000 us - 3200us-1=
+	LDC1614_set_conversion_time(i, 0xB6CF);//10 Hz overall sampling rate with 2 channels 50,000 us per sample
 	//LDC1614_set_conversion_time(i, 0x78Ef);//20 Hz
 // 0x0005-0xFFFF: Conversion Time (tC1)= (RCOUNT1×16)/ƒREF1
 
@@ -225,7 +227,8 @@ s32 LDC1614_set_conversion_offset(u8 channel, u16 value) {
  * */
 s32 LDC1614_set_LC_stabilize_time(u8 channel) {
     u16 value = 0;
-    value = 0x1FF;//155//30; 3200 for settle count or 0x00C8
+    value = 0x00C8;// 3200 for settle count or 0x00C8//
+ //   SETTLECOUNT0 ≥ Q × fREF0 / (16 × fSENSOR0)
     // value = 155;
     return IIC_write_16bit(SET_LC_STABILIZE_REG_START + channel, value);
 }

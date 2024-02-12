@@ -38,7 +38,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
-#define Base_Can_address 0x70
+#define Base_Can_address 0x10
 
 union Candata {
  struct { uint32_t data0 :32;
@@ -66,7 +66,7 @@ uint32_t sen0_ch0;
 uint32_t sen0_ch1;
 //uint32_t sen0_ch2;
 //uint32_t sen0_ch3;
-uint8_t drivecurrent[2]={Base_Drive_Current,Base_Drive_Current};//Base_Drive_Current,Base_Drive_Current
+uint8_t drivecurrent[CHANNEL_NUM]={Base_Drive_Current,Base_Drive_Current};//Base_Drive_Current,Base_Drive_Current
 volatile uint16_t status0=0,status1=0;//,status2=0,status3=0
 volatile uint8_t status0C=0,status1C=0;//,status2C=0,status3C=0
 volatile uint16_t N_AE_0C=0,N_AE_1C=0;//,N_AE_2C=0,N_AE_3C=0
@@ -399,7 +399,7 @@ int main(void)
   LDC1614_reset_sensor();
   HAL_CAN_ConfigFilter(&hcan,&canfil); //Initialize CAN Filter
   HAL_CAN_Start(&hcan); //Initialize CAN Bus
- // HAL_CAN_ActivateNotification(&hcan,CAN_IT_RX_FIFO0_MSG_PENDING);// Initialize CAN Bus Rx Interrupt
+  HAL_CAN_ActivateNotification(&hcan,CAN_IT_RX_FIFO0_MSG_PENDING);// Initialize CAN Bus Rx Interrupt
 
   LDC1614_mutiple_channel_config();
 
@@ -442,10 +442,11 @@ int main(void)
 			  Last_Time=__HAL_TIM_GET_COUNTER(&htim2); // reset the counter either way to prevent rapid interrupt firing from the software timer.
 			  flag_sample=0;
 			 // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
+			  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET); //blue LED
 		  }
 
 	  // this code should no longer be needed siegeljb Feb 2 2024
-		  if(__HAL_TIM_GET_COUNTER(&htim2)-Last_Time> 160000){ // should be 120ms  //10ms per tick
+		  if(__HAL_TIM_GET_COUNTER(&htim2)-Last_Time> 110000){ // should be 100ms  //20ms per tick
 	//Last_Time=__HAL_TIM_GET_COUNTER(&htim2)
 			  //HAL_GPIO_EXTI_Callback(9);
 
@@ -497,8 +498,8 @@ int main(void)
 
 				  AEH[0]=0;
 				  AEH[1]=0;
-				  AEH[2]=0;
-				  AEH[3]=0;
+				  //AEH[2]=0;
+				  //AEH[3]=0;
 
 				  mycandata4.stmp[0]=T_raw;
 				  mycandata4.stmp[1]=T_raw>>8;
@@ -555,7 +556,7 @@ int main(void)
 		  }
 		  if(flag0==1){
 
-			  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
+			  //HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
 				//Tten_conv=((T_raw*1650)>>16)-400;
 				//T=( ((T_raw/65536.0)*165.0)-40.0 );
 			 //     sprintf(Buffer, "T: %u raw, RH: %d , T: %ld C \r\n",T_raw,RH_raw*100>>16,Tten_conv);
@@ -606,7 +607,7 @@ int main(void)
 			  while(HAL_CAN_GetTxMailboxesFreeLevel(&hcan) != 3) {} // wait for a free mailbox.
 			  HAL_CAN_AddTxMessage(&hcan,&txHeader4,mycandata4.stmp,&canMailbox); // Send Message
 
-			  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6); // Red LED
+			  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6); // Green LED
 
 			  mycandata6.u16data.data_u0 =status0C;
 			  mycandata6.u16data.data_u1 =status1C;
@@ -630,7 +631,7 @@ int main(void)
 			  while(HAL_CAN_GetTxMailboxesFreeLevel(&hcan) != 3) {} // wait for a free mailbox.
 			  HAL_CAN_AddTxMessage(&hcan,&txHeader1,mycandata1.stmp,&canMailbox);
 
-		   	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET); //blue LED off
+		   	  //HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET); //blue LED off
 
 	//		  get_stats(&Data2[(1-datahalf)*SAMPLE_LENGTH],&std2,&mean2);
 	//		  get_valid_stats(&Data2[(1-datahalf)*SAMPLE_LENGTH],Data_quality, &std2,&mean2,&valid_samples);
@@ -786,7 +787,7 @@ static void MX_CAN_Init(void)
   hcan.Init.TimeTriggeredMode = DISABLE;
   hcan.Init.AutoBusOff = ENABLE;
   hcan.Init.AutoWakeUp = ENABLE;
-  hcan.Init.AutoRetransmission = DISABLE;
+  hcan.Init.AutoRetransmission = ENABLE;
   hcan.Init.ReceiveFifoLocked = DISABLE;
   hcan.Init.TransmitFifoPriority = DISABLE;
   if (HAL_CAN_Init(&hcan) != HAL_OK)
@@ -928,7 +929,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 160-1;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 4000-1;
+  htim3.Init.Period = 2000-1;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -1033,7 +1034,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan1)
 //			 drivecurrent[1]=MyRxcan.u16data.data_u1;
 //			 drivecurrent[2]=MyRxcan.u16data.data_u2;
 //			 drivecurrent[3]=MyRxcan.u16data.data_u3;
-			 for(int j=0;j<2;j++){
+			 for(int j=0;j<CHANNEL_NUM;j++){
 				 drivecurrent[j]=MyRxcan.stmp[j];
 			 if(drivecurrent[j] > Max_Drive_Current){
 				 drivecurrent[j]=Max_Drive_Current;

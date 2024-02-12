@@ -113,8 +113,8 @@ typedef enum {
     The low bit 0~5 are reserved,must set to 000001.
 */
 #define Min_Drive_Current 1
-#define Base_Drive_Current 2 // 0x6000
-#define Max_Drive_Current 6
+#define Base_Drive_Current 3 // 0x6000
+#define Max_Drive_Current 12
 
 #define drive_current_to_hex(x) x<< 11
 
@@ -130,7 +130,7 @@ typedef enum {
            typeof (y) _y = (y); \
          _x < _y ? _x : _y; })
 
-#define CHANNEL_NUM  4
+#define CHANNEL_NUM  2
 
 #define SetBit(A,k)     ( A[(k/32)] |= (1 << (k%32)) )
 #define TestBit(A,k)    ( A[(k/32)] & (1 << (k%32)) )
