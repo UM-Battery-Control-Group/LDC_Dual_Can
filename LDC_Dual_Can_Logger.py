@@ -758,13 +758,13 @@ async def main() -> None:
         #reader = can.AsyncBufferedReader()
         
        # bus.reset()
-        logger = can.Logger(File_Prefix+'logfile'+datetime.now().strftime("%Y%m%d_%H_%M_%S")+'.asc')
+        #logger = can.Logger(File_Prefix+'logfile'+datetime.now().strftime("%Y%m%d_%H_%M_%S")+'.asc')
 
         listeners: List[MessageRecipient] = [
             #print_message,  # Callback function
             parse_msg,
             #reader,  # AsyncBufferedReader() listener
-            logger,  # Regular Listener object
+            #logger,  # Regular Listener object
         ]
 
         def close_future(future, loop):
