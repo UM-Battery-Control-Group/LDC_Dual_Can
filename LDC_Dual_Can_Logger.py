@@ -10,7 +10,7 @@ import can
 import usb
 import usb.core
 from usb.backend import libusb1
-import libusb
+# import libusb
 from can.notifier import MessageRecipient
 # import usb
 # from PySide6.QtWidgets import (
@@ -737,12 +737,12 @@ async def main() -> None:
    # bus = can.Bus(bustype="gs_usb", channel=dev.product,  index=0, bitrate=250000)
 
    # be = libusb1.get_backend()
-    be = usb.backend.libusb1.get_backend(find_library=lambda x: r"C:\Users\siegeljb\Documents\LDC_Dual_Can\libusb-1.0.dll")
+    # be = usb.backend.libusb1.get_backend(find_library=lambda x: r"C:\Users\siegeljb\Documents\LDC_Dual_Can\libusb-1.0.dll")
   
-    print(be)
+    # print(be)
     #dev = usb.core.find()backend=be,
 
-    dev = usb.core.find(backend=be,idVendor=0x1D50, idProduct=0x606F)
+    dev = usb.core.find(idVendor=0x1D50, idProduct=0x606F)
     #backend = usb.backend.libusb1.get_backend(find_library=lambda x: "libusb-1.0.so")
     #dev= usb.core.find(idVendor=0x1D50, idProduct=0x606F, backend=backend)
     #dev = libusb_package.find(idVendor=0x1D50, idProduct=0x606F)
@@ -761,7 +761,7 @@ async def main() -> None:
         logger = can.Logger(File_Prefix+'logfile'+datetime.now().strftime("%Y%m%d_%H_%M_%S")+'.asc')
 
         listeners: List[MessageRecipient] = [
-            print_message,  # Callback function
+            #print_message,  # Callback function
             parse_msg,
             #reader,  # AsyncBufferedReader() listener
             logger,  # Regular Listener object
