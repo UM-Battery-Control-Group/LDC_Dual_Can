@@ -99,13 +99,14 @@ s32 LDC1614_mutiple_channel_config() {
 	for(uint8_t i=0; i<CHANNEL_NUM;i++)
 	{
 
-	LDC1614_set_LC_stabilize_time(i);
+	LDC1614_set_LC_stabilize_time(i); //3200 = 3200*16/40E6 = 1280 us =
     /*Set conversion interval time 20 SPS should give 0.05um resolution*/
 	//LDC1614_set_conversion_time(i, 0xF474);//9.96Hz  62580
 	//LDC1614_set_conversion_time(i, 0xF000);//10.14 Hz 61440
 //TSAMPLE – settling time – channel switching delay = 1000 – 8 – 1 = 991 µs
-	// 20,000 us - 3200us-1=
-	LDC1614_set_conversion_time(i, 0xB6CF);//10 Hz overall sampling rate with 2 channels 50,000 us per sample
+	// switch delay is 692ns+5/fref=817ns
+	// 50,000 us - 80us-0.817= 0xC2FF
+	LDC1614_set_conversion_time(i, 0xC2FF);//10 Hz overall sampling rate with 2 channels 50,000 us per sample
 	//LDC1614_set_conversion_time(i, 0x78Ef);//20 Hz
 // 0x0005-0xFFFF: Conversion Time (tC1)= (RCOUNT1×16)/ƒREF1
 

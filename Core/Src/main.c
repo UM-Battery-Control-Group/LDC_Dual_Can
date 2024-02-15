@@ -150,7 +150,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 	//			index_data2++;
 	//			index_data3++;
 
-			if(index_data>SAMPLE_LENGTH){
+			if(index_data>=SAMPLE_LENGTH){
 
 				index_data=0;
 
