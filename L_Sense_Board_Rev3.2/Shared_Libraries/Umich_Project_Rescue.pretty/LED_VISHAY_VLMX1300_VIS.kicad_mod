@@ -1,0 +1,1103 @@
+(footprint "LED_VISHAY_VLMX1300_VIS"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -0.138005 -1.32974 180)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "197377f6-d929-4e2c-8ef3-cc03fab11f67")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "GRN"
+		(at -1.739245 -3.241802 180)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f2d8ea2d-ff44-4cbe-b229-4e322037a610")
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "406818fa-3532-409f-a801-2e42b1c6a40c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "LED Uni-Color Yellow Green 574nm 2-Pin Chip 0603(1608Metric) T/R"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1f757919-72c9-45ac-b07f-e645a12d65d9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "COPYRIGHT" "Copyright (C) 2023 Ultra Librarian. All rights reserved."
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e37d9bbc-0364-4b7f-8365-32ef8ac35a5a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MFR_NAME" "Vishay"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0f0e6e1e-dd21-4c14-af83-a62c330ca787")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MANUFACTURER_PART_NUMBER" "VLMG1300-GS08"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a17a7806-ce5b-445d-be18-68adea10eda9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "REFDES" "RefDes"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5f604bcd-716f-45bd-bda2-b6f153f824aa")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "TYPE" "DEV"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1695e056-39ea-4e6c-81a1-0b1f7e569e21")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "SUPPLIER" "Digi-Key"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d19fd309-9ac3-42f4-8bda-2f37e0cdfdea")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "SUPPLIER PART NUMBER" "VLMG1300-GS08CT-ND"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ce2f08d6-958a-44f2-9d1d-786f3bad98f2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MANUFACTURER" "Vishay Semiconductors"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "41ecdaf9-9894-44ba-a250-c57ca372ef6e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MANUFACTURER PART NUMBER" "VLMG1300-GS08"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "eaec07ef-8508-4aa6-ac99-6cdc3e996c42")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "ROHS" "Yes"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "89e4e726-abf3-42c3-a18c-3ea909974769")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "CATEGORY" "LEDs"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "67a84fa2-8dc4-4ce6-9213-9498cd6694e1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "STOCK" "55201"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c7577503-b7a6-477a-a869-a3f4c0bfa49f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PRICING" "1=0.3, 10=0.237, 100=0.1065, 500=0.09616, 1000=0.07898 (USD)"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a7df605f-6d0b-49b9-a427-96b6b9e32dba")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MOUNTING TECHNOLOGY" "Surface Mount"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "045b5fc3-f79d-4bec-b9ec-cd7ffce84f47")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "CASE/PACKAGE" "0603"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2408099a-6501-459e-b0f6-cdd5610a1902")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PINS" "2"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "013ebeb4-0a79-4c7a-af00-2523af5a77d8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "COLOR" "Green,Yellow"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0eebb144-bf55-4697-846f-89ab8f4622f6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "CASE CODE (METRIC)" "1608"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2dc7ab6b-9e5e-421a-a579-14771e2729e6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "CASE CODE (IMPERIAL)" "0603"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e3e8ebcf-91b6-4092-ad74-2615cea77e30")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MIN OPERATING TEMPERATURE" "-35°C"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "35812946-56a4-4cbf-88a8-0700d2b7f065")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MAX OPERATING TEMPERATURE" "85°C"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "921a63fc-2718-45d0-ab49-3a1dbbf59608")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LENS STYLE" "Rectangular,Clear"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "08a02b47-6668-4c63-b7b9-095e30b285ea")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "FORWARD VOLTAGE" "2V"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "44bbb632-d2ce-4ba3-8d82-dde31370c276")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "VIEWING ANGLE" "130°"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "94b0d946-b4e1-4efe-8b46-ab4b2f27787e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LUMINOUS INTENSITY" "35mcd"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0ac68d76-f634-44ad-8df6-2bc0d03148ca")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "FORWARD CURRENT" "20mA"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9963f0c2-778c-43ac-b085-f83ca7ef9095")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PACKAGING" "Tape and Reel"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e9508961-b547-4d0c-aaf2-ca6efd8edc3c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "WAVELENGTH" "571nm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1b5a82f4-8866-4445-a032-ae7dceb8dc5b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "ILLUMINATION COLOR" "Green,Yellow"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3e48a983-c6d2-4278-9f61-d00762589ef5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "POWER RATING" "75mW"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "41de270b-31fd-4d24-8e9e-ee723862a542")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PACKAGE QUANTITY" "1"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "295c7d0b-9001-4b01-930c-258037b43d61")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DOMINANT WAVELENGTH" "571nm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4bf0e902-a80d-4ac2-9c1c-dc3abde536f8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "TEST CURRENT" "20mA"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fdc3f1f1-3b19-4eb5-b237-dea378e289d5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "NUMBER OF ELEMENTS" "1"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "55c89dc7-3dd3-4c31-92c6-f21af809c399")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "POWER DISSIPATION" "75mW"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ca8c4397-007b-4fd6-8b49-5648e49f38fc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "NUMBER OF LEDS" "1"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "904ac8cc-7775-4db7-80d4-cf0adc74435d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "REVERSE VOLTAGE" "5V"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "da1dba3d-7638-4558-afa0-698a21e6d6bc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "SERIES" "CHipLED"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6839784d-ee71-4ee1-bf35-5b8b1719bac3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LENGTH" "1.6mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2353940b-1826-4421-873b-777662c2aa0c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "WIDTH" "0.8mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d9bf458a-1765-4be2-8d96-1887115530de")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "HEIGHT" "0.8mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "210751bc-3504-47b1-8d63-af61ade20a00")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DEPTH" "0.8mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b9d454c8-710a-451b-b46e-70ed119423e5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "RADIATION HARDENING" "No"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "495f0752-252d-4b5d-8eb3-6b23a4d2fdd5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LEAD FREE" "Lead Free"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "32bfc94f-f758-4096-b4af-1f9884db48e6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "ROHS COMPLIANT" "Yes"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0ddf8b18-16d1-4165-930d-405ab10077e5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "REACH SVHC COMPLIANT" "Unknown"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8ddca93b-11fa-431d-8216-59c51f53d78a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "COMPONENTLINK1URL" "https://datasheet.ciiva.com/26322/vlmo1300-26322139.pdf?src-supplier=Element14"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c0f357ae-e4a5-43d5-8f61-cbf6c3b89728")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "COMPONENTLINK1DESCRIPTION" "https://datasheet.ciiva.com/26322/vlmo1300-26322139.pdf?src-supplier=Element14"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3011af18-e2d7-4397-9804-34e803fc853b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "COMPONENTLINK2URL" "https://datasheet.ciiva.com/26322/vlmo1300-26322140.pdf?src-supplier=Element14"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a5316784-3b2b-4d44-b445-3b53c252d7c3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "COMPONENTLINK2DESCRIPTION" "https://datasheet.ciiva.com/26322/vlmo1300-26322140.pdf?src-supplier=Element14"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "408fcb15-8767-48b6-8ea1-f4fcdbb838c0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "COMPONENTLINK3URL" "https://datasheet.ciiva.com/8028/vlmo1300-8028023.pdf?src-supplier=Element14"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cb42fc7a-542d-4e05-ae6b-0ee71c4cdf62")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "COMPONENTLINK3DESCRIPTION" "https://datasheet.ciiva.com/8028/vlmo1300-8028023.pdf?src-supplier=Element14"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f052887a-e769-4f6d-b17d-2bfc192d4cb4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "COMPONENTLINK4URL" "https://datasheet.ciiva.com/9333/vlmo1300-9333390.pdf?src-supplier=Avnet"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "20f194a8-898f-427c-a97b-a16617d72cdc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "COMPONENTLINK4DESCRIPTION" "https://datasheet.ciiva.com/9333/vlmo1300-9333390.pdf?src-supplier=Avnet"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c5238329-e0ae-45ff-8125-0c435349c3cc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC PART#" "C4749244"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fffd733a-d2b7-440d-86ac-490827597827")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "ALTIUM_VALUE" "LED Green"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "57c002d8-101f-4d7f-a06e-7168b503857c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -1.016 -0.635)
+		(end -1.016 0.635)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7cc2d3d4-ce19-4366-9e6f-f8729cc4a750")
+	)
+	(fp_line
+		(start 1.016 -0.635)
+		(end -1.016 -0.635)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3e1d68c4-b67f-480c-bedd-c55a8a4e0ebd")
+	)
+	(fp_line
+		(start 1.016 -0.635)
+		(end 1.016 0.635)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7c8a8502-996f-4468-9cb9-e4569fd3b88b")
+	)
+	(fp_line
+		(start 1.016 0.635)
+		(end -1.016 0.635)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1c37486d-888d-45dd-ab36-e5b170980650")
+	)
+	(fp_circle
+		(center -1.35 -0.575)
+		(end -1.35 -0.4988)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "75309f28-14a2-4442-b5dc-973bd7804f94")
+	)
+	(fp_line
+		(start -0.8001 -0.4064)
+		(end -0.8001 0.4064)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "B.Fab")
+		(uuid "f8827a5b-5184-4898-9f42-1d141f0e7095")
+	)
+	(fp_line
+		(start 0.8001 -0.4064)
+		(end -0.8001 -0.4064)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "B.Fab")
+		(uuid "b9b3b88d-abdd-4153-addd-e548a866ddfe")
+	)
+	(fp_line
+		(start 0.8001 -0.4064)
+		(end 0.8001 0.4064)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "B.Fab")
+		(uuid "0b079ef8-0308-4190-9d3a-2a5a29f29d28")
+	)
+	(fp_line
+		(start 0.8001 0.4064)
+		(end -0.8001 0.4064)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "B.Fab")
+		(uuid "edf15830-2281-4cd9-b74f-fd5a6f3131b7")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 0 0.0762)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+		(uuid "e948feee-3c40-46f2-9ef6-447494398a3d")
+	)
+	(fp_line
+		(start -1.0541 -0.6604)
+		(end -1.0541 -0.6096)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "User.13")
+		(uuid "c63d0479-22e2-403b-a19a-f1657762258e")
+	)
+	(fp_line
+		(start -1.0541 -0.6096)
+		(end -1.0541 0.6096)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "User.13")
+		(uuid "68496898-f4d9-4a6a-94d4-b16dde64502f")
+	)
+	(fp_line
+		(start -1.0541 0.6096)
+		(end -1.0541 0.6604)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "User.13")
+		(uuid "84195487-bf04-43e1-8b4b-fca4c5869ff7")
+	)
+	(fp_line
+		(start 1.0541 -0.6604)
+		(end -1.0541 -0.6604)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "User.13")
+		(uuid "f986672c-b0d6-4b79-9017-72f0e60459e4")
+	)
+	(fp_line
+		(start 1.0541 -0.6604)
+		(end 1.0541 -0.6096)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "User.13")
+		(uuid "38813c90-12a6-4073-aead-0407371dc110")
+	)
+	(fp_line
+		(start 1.0541 -0.6096)
+		(end 1.0541 0.6096)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "User.13")
+		(uuid "cd153a9c-558f-4feb-a209-ec7c4d25c3b3")
+	)
+	(fp_line
+		(start 1.0541 0.6096)
+		(end 1.0541 0.6604)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "User.13")
+		(uuid "d7de5e44-feb2-411d-a812-287b810b7444")
+	)
+	(fp_line
+		(start 1.0541 0.6604)
+		(end -1.0541 0.6604)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "User.13")
+		(uuid "c1764638-90ec-4317-89d9-779df8f80a10")
+	)
+	(fp_poly
+		(pts
+			(xy -1.0541 0.6096) (xy -1.0541 -0.6096) (xy -1.0541 -0.6604) (xy 1.0541 -0.6604) (xy 1.0541 -0.6096)
+			(xy 1.0541 0.6096) (xy 1.0541 0.6604) (xy -1.0541 0.6604)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "User.13")
+		(uuid "60d22bdd-8e17-41a7-b44f-1fb8bc68b126")
+	)
+	(pad "1" smd rect
+		(at -0.5969 0)
+		(size 0.4064 0.7112)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0)
+		(solder_paste_margin 0)
+		(uuid "9a2ac1de-d250-44b4-9f97-b6e54b4c9b81")
+	)
+	(pad "2" smd rect
+		(at 0.5969 0)
+		(size 0.4064 0.7112)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0)
+		(solder_paste_margin 0)
+		(uuid "c2844539-0da3-45d0-8021-570cd6c7539c")
+	)
+	(embedded_fonts no)
+	(embedded_files
+		(file
+			(name "LED_VISHAY_VLMX1300_VIS.step")
+			(type other)
+			(data |KLUv/WAXZiWdAKrd3CEr4GrIFhsSL3Y+817LrBPGUMpZGALpcHj+/QKYubK7u28Gz1GM6kSMQQAI
+				v8sCEwK8AQsUS8MQTKGkimTy3AKKQy4oDhKIxGH5G91QRIEsEGZkPKRdXDwKDJMkgQIjWoAqDpED
+				UtDQSlwwGBEEganSSOxmcPNEYqhAEKBIFqIJchx2Ylkf3714uBt58bx3VZ/5TFw8+j17Km/BsEAg
+				hxSBGBxqZ5Mjotg9U0SSTCyVaKJAjkbdWd3icRzGAy1T5LBcRToAavwhQSQVRTRVOgJJD4ii8AjA
+				aDCf3g812aqxj0IxKlMkikgmB0SRqEF6NDSCLEQgSxSBIBMFgtpiMRjNAhgIpwIlqFCiBRGJg9FI
+				hUjhUZAgEKlBQaooEAZ4KBAa+ICJiJB4UEBgNhrMxMRFsbkoJjCZTWYTgVE8ZDQbTAMJzAKKCAzm
+				gQ0mgQyEAvNwcYCBkGigaPCgQQaCS4PzOJEDBHJAFAeHA7JAU0V6OA+CViVECsZYiEQQBsMkGWCJ
+				KA4VKGpoPI49JKdzkhDuEVUgCwJTRIImSuSIOFggUAIJZEGBgA6JMkUNkmiB0bCJCcyDhGaieEAK
+				jYQCisvm8lBgNBKOsgZHuObiwHkch9FYdRaMA5mNRAOJzYOL8zgQmgtExGUzcYnQYDYRGYjEIZks
+				DgkymUAN7gkNxgHFZkKTUcB5nFKwBopEwT5li8eZ2GguEwWDy0Mm4sLAA6ZB8UCHMR0QTRGJw6K7
+				kMhsMhEZBTAQls3DAwgJjQMFhoGDBhcIMM7jRCyQmcBAOIw0hNviWezFU6mLJ/MWT7ctGJiLR4DH
+				cRiTw+EhoUwah4CL5xbQFIkqEWUSUSwRiTRJEUnBBGKoNGwBTdDDEVUekQjBiSxIC6RJ0iCZHCCH
+				wYAaIgZHxXEQHIfxOJsElBGwNf0SzBLw6pzHqUI7oAGywIIAxFCRFlgeEcRhRA1QBMEx50Fw0m4C
+				KSbRVHEYjIhEmiYSxVGJHpYIIimgRA8oYgAggALsErCwLEFSkQL55t5U7UTrVagExDMsfHPCauJp
+				MhAKYDRmz0QGgkudYeH/bl5mTV28Q1Sru00EpgHm4cLAQZpSHhEJgoCjgXyTddkNMEUiiSJpPLfr
+				lHcTb3FANFGiBQ3l1KpKiIMiORp4Z1ZWdTeRSCCWaOERNX5tdfwbJZocJFv1iDhIEjT0+bZrYPYp
+				QGBTmBQetNMVgOGIQAseUKNur0MgEUNUkUAcjV8AxiSiJLA8IBIFUgRqaHRvK94DCQ0DFd3O1sbG
+				vr62tq6ufvabmW0TcZmWWXk5ORkZ+fjY2LhYufjby+CSgQDi3l1eXd3cXFzc21vbXdvaQ1wofdbW
+				1VVV1dRUVNRT1lPTLe47uGgMeGnnOTk3NzU1MzMxOzEvLQuDqbQ8VjY2MjIuLioqJh4TEQ9/EhKa
+				S4MdFhr+fX18fHt7inp52K2shnlweHZ3dXV/Wxsb25rdmlouhoJpZ2hmZmVlf3cZG5dtmRpGcNEs
+				pJZhlt2VmZVV2d99/ppm82XSfV6Px9/dbq/Xn18872Y2TbxmxAMSmgTLrb2dnY2NfX1t1tXa79pe
+				zIZgILHAzcusrJzJyMh3bLy8eIyLn8Bl2lwwDH3e3V3Vzc1F3Fvb2m61iMzktX1W1lVV1UxFRT21
+				/eM08HBhkKDU9KWdncy5uamZmYnOxAOJTYTEg0SB5REtRKSJYcEBouixQj1OgwcRmQYPGEAOI0G7
+				pfvc1m1lZT1VVTUtPTXN4+n5e312budy7qZmrmYu5mLu5XKuWW7lToV3d3e7d3ZrtmV725uZme2Z
+				2Z6trdVW7c+MX9tdu7Vbq1drWHu1WLu7+/99/l7P3+vzeTy+f7/bu//u1W7VZu5mZuZlZs4j72qx
+				YvHu7uLurq6eqtZuZa3+qcqsqHqrmqqonaqqqqqaqqWYR4VSVVVVVVXb7iPfchfPHVPNUivxEpNP
+				D025SvFM9f/7/Nynnr/X5/N4fP9+t2Nlrx5rbU6m1sa2pqWlz+xMzmzOTM3UzMx8ImZe5iLeJSJi
+				9l3iZZ8lVpqlWZZldyUenl2lVf59/t/n7/f6qszn8RM2M153NxvzGufiHh8z767u7i7e2tquXq+q
+				qauqCavYyLiop6empc8ufXYiZ+KaqiZm4pR4h4iIiHpmeHd2h2tmhobYZ2h4V1iGq5x4loVYeIW/
+				VeH7fT7/Cvd7fff/1/5v5u5u7l5m5gTezc3LrWTmZebd3VXH0byqTYpkciBuRyRIw9b2vFr7bWVt
+				Xk1N1NKtyqdLrTSfncqcCJh7x8zFk9fExbPnPNW8vDPL+kKCQUM0SZZHowJSgsJ0Z7s/M/uV9fa9
+				7uzMruxut9ffZd1l3O9u7u1tbe16dja2/ty5/NZE5FXMssvLMqw8Yhkzlm2WqWJZ4urPyqzs7upa
+				f/dtteauMn0eq+zqqqw4r8+zyuPx99vrb3v93d3NzX3f3taelHfPzPxiftd3V1Vzc3d196yrrWfV
+				b17zqU89Kmqnqek5NzvP3XllXVXNZz7zmL+0fOXPMn/88Y3HPOMZv/hpz26/u6u9+9XO9a2rXc2s
+				bvauc/31rtf5vW+taz3zV7969vl//+//en0ef+/u7u7ububu7tPuNd5lZmZm3eVt7tZm7d3e3d3d
+				p672dmdz9mqvtmppozbaszvPVLu0n8fS7u7e7M3W7MzG7ITu7u7u7u5sxbJmfB+bsRl7sY33unjX
+				+rb6WPd7Vn29Po/nO9vxd3u9/n7nu7u5+V9mPlVetlpW5mRmXlZO3uRN1uRMTr7ES7ZkS67kStbk
+				Ix+5sXbP2PiO93iP8ziPb9xd/Pe5mIu3eIuzOIv/PitePH0+f6/P4/V5/P12+75ef0/nXWZmZmVl
+				2+Laa28vL++trq5t7a1thr2oEzIVHc3QjIhIQZIkHSM4EZBiaiZovZsD45FpWDQIhKLBGAZRGAhR
+				FASSEBnk0EiRkuYLZ/+4BiqZ7bZCidoxxyliGq1M0sAHfj4dgQotx3iZL+sYhXxYEmp0xVauFGA/
+				/NO+1kD5ealxBQ0yb0ESRR4uDknN2rSiXdOahU2hwcs+0OnE/w23JENNh5tU8sphlfOlNsNqmgq4
+				6l3CgnmC/WBi0sy9Z2cD/Di+CL6aVTN1a54Ig6euIUzbVJpVSDEBFpQQx4/6esbDUyRYfAxKQ+4W
+				iLSt2BJRDDljAWYcpDG6YrAbqBmYkC2/aKatXAnfAvQ7jh3/BkyWdPN1mysYmzOHQprlft9sL5Jo
+				2QjT4YAym/8fleEV6UMbZICTAWqyE0SvSnDm3175gGGIBBtyvGi/cJl/fZw2eIty9aSyS1hs47JH
+				BOaM6pIJMrsDu5IWL0ngkK/ZpDScG6xu9ud/ZpNCC8apPBYi8DiYK6h+HsBa26cGgBWCBfCxvhXy
+				dlB7dXOP52wGbQJhlHZK7lES6MRHPudIZ8u+5jY6BQK5l4aI9vnbiE8iMCEwFSAHSqCU7rdERa0v
+				EIehShtX1EFpGuGjX244PTb3OfLQRIVFfsC9rj4ExavorHsLStP4vCJzz78M84wGlInlEq0jELPn
+				WCfs3+kgy9CucrHI6Apzh0dqxLUgUpErjhbdiG5EsB2FD0MWw13iLyCHn638P8zrFEtzBpQIlAEV
+				WoKhD17STt24lKIQOEZM2Bya6yraco/kkuBIYQjzowPxiyNApgBBnp0SEb7LPDOOYNBTzM/KLWcm
+				VwfX5Z4rQqKUByKJcXpi+fbWZxRLHTahV1H6ol8eLqAL8yT+iQZqPHCAeVQyMVFD5VIwfwvKFGsf
+				igHP2nArivnMmBrO0a5mrogVKWmxtYqeVRqDNlhXFzirfgfZB4LYpaHhVHwnL6OaE3kizCnMwBYg
+				3EhD6QLGqMyhSrOoM4QPTb+F2N9c4RuMstdzg1+evsH0FgDbHSZ6VcIzerkAPLNnPKPD5opDY8hy
+				BjQCpcTy9kSg/Svif0rr4MJaME+iv0OciVGqugCsBOIwWE1ao2snsw5pFjx86PjLpbQ3ephkMXZ8
+				G5+L85D51UWR2we8ih/r0cR/wn5jkKd3mZh4XdNS2ooCURqiKjqGlAXjI/q/jeMIBV27oiebAyjB
+				eSz/fxptrgtuYcqO3/D/SmYK7wb9h6nK93nORiVZ2FoEkqEl6kLy2Z1/zKEpBRdRwPgvcz/qkdrV
+				sKJHYH0GYHtTGVc+gj2iOb+4h0Lxd9xcHfWvUVHOSw3sTDWdqZr3tdZAePW4Qt45A4wOzgNC+0aO
+				DFVWRCYGKTW3mjET/CNFaHWxy49zjmCtl/YskAKUAyXaZOCCu10xluIdY+ALvZJoeqozOtDVXjn2
+				Nfkz9bPhubIK/GOtoTNWBz7Pud9oLpMnmugU9WWmVmYQ18HXiwyKeEzi9KJREKgITDnv6cnJtc1t
+				WWa5Kchg2BSI0vD2ryodHEYKfFZajx6PyRD11J368OLNkxW076ZeO10uRjRzSmgOtfxMctowjtnY
+				gZr42by+J60XZahME640/jtLSOqNgs698igkgO0LRxfUscmVFyRbzykchu4FQb7xwZFQ4yJXJVVW
+				UzL+Y0WFApu4Y5DYEy06sfvVQMuD/nyXWK3vAQrh7QEc0gii2oxaKdf496e6ucIE1Ih7e8zu17Kh
+				8HsHuqnOKlqWt/IYhRqDZWKKhy5zZ+2Ilo0rF+8BCoLJlg+8s1n3YuptgtUrO8RmaisjZFMJ7JkT
+				caxHUbnP4qgggezB6mfMiE8CQV9oPAAgiZjAEQnU53kzyMTD3HMTFop4/WGbb/+EfkojASGLuC+V
+				23fEiUCboGrx0wlLPoevFZaB6UucsVEbAO8AftV+PPCXwe1uvzfEIX9lwiUj4snDnIKLpXRZ2pAF
+				aKeUxOJe/pB5rO85ZyOMkoeoQP+hAtV81zBmZHAQpQdSVAC/JIFdU4nbfBT8mFNwOV70Be3PQN5n
+				jzP+x1AvPsLa7QgDkGyeDn3kaJdQGKZh7vsm+KXOF/okax9zk4hnk/vGqOKZ7Gcek64k/p71Bk7S
+				/OVe3kOtqn/ysqIFYhTRKmxNiNgDakq+3TPmyI2twSUc5GcE2EYhPf56J9viic7wmG/4QwWaSP2H
+				RtNMumiBUYVz0yzp/G1QKfJqmbQHe2hmpmWfPBQ+wFHBKPUo3TyiiBixRAlB3zU0c5Z/yadOtXPD
+				GqjoNlWkwkpXhtTVIDKm0KK3GbocBMpMYKL5qb1BaOkMmEPITAm6Zv1P11x/R610Iqqv0kgtXlwM
+				ah17ysoNkBTrcrYqMIT8ZFE4n6lWmsguY+tIeP5DJrZkalkks3AoxC6bgiFS/ugaWtOXa09OGGBs
+				qQC1E81nQdbXEMBjRbgZC4v6REfzWrR+OCivJFsx5vD47HF/nC0H6WHzFAfVkTyMu0TjagokkCY+
+				slnoUxH+fMLURyNhz/IZaT83qN09jsZYNMPOcDVYXgVUMZ/SA18hH8u68JBIffGXljBHhOEWKHrg
+				gUUfKOgilII378FsFTkA7MKqdLR397IZM7b3TGU0Jb1tv4HbF3JhIoJ6ZnJsjR2bG6s2moreN+/B
+				bTW5gGhRm9RKdxUrBKhxStOLUq+mvaLOmJQLkwiiJBVXLMJyLRhEZFaseQaJ9c2CrdDIH5XpDTWZ
+				oGjVVygJv+Pry3gwAnK83M6BizU0Va4a04Jw0UoaHZMj58X8FcaDhYF01y9feWe8C7ldqPsq9Sym
+				SGifFxReixncwIgbXPGBgi5Ceu8PDGarywQmWoqsRQkD6MIb1GujHSwH5fZOHIzhMViMNHvN9dFC
+				/aNfUFhjWITxm8cEEUQVHGAiaAW58HDCDNdTz0JIrEr9C1oZjSJAi/DLm6NDmPzyjBxkykJTrvSV
+				ZpI1nyJ+cSXafoqf5lrGYE6NSVSmdbQalD96AEN5VJkg6JfPaNxP+OuuU8EL+vrZ/JGyCNlExM4t
+				V32nsezrnP6eXer5yfJphxzL9OV/8wACq42Jv7S8LWR2meCQathPgg+EjH2fatLKZNhjo1cCzH8T
+				eSXmohlmuVK/6+Jp/pGooP4NmIcImeow0Qp1+a4tO1MyEUF/PZl1FgHM9jtWWIUl5asfB1rjKNcP
+				8s1DgGwsHawJ93sp9UF8PNdqsoaCohAuhW8wkh19p2pJhgYwjiZvou9R28xdjwDt+5Kp3ScqhPWa
+				qu48UotruFrUYrjB06fx7YcwAtMNu7lNTMKiLc1OMqXHM2YELq9rofJCKNvD5B41B/Sy8FgaUewk
+				EAFUu/oLayGsxVxUzw4bo2UgfDtJmoMJmD9/vMVnvbVOEIZAjr+qKsuQ0lfAknyCWTTyDqax3kkS
+				P+VVVn1ojaPVAsALQ4NQhfkZXB9B6gqVBrB6j0tn2b+IbgFmebnDaW1FBuyBCijfBnPJo5E5A4dn
+				HlwWiwUCcYfxLVusPgTUZqV5ewThJHFmlBHGQtV7MNIuSLnwDt5KG7xg8ffhMhTdWqTEopFZU95J
+				MX2LLKWQ9qaW7g6L5nKokE0UWx7W2h2l//r6fvobhh1NGBozkS59Vea0ac73DOPqaKRoFfDHr2QZ
+				xq7T8O4/PYJLxI25V+tjC0ETq/sfGRoLvb9sTjlPlp+kHQjobND6246kVizy7yBipT3diqqAS8XD
+				lfDvyBg0FGoQ6h62MKa2GOLIS2zGQDCkmol/KILg0QCpi0XWkkeROyFUFwOtJxw6eFqcrWiFpSCE
+				6vw5wN1EO8ziA5BeNPfoqBLWTQAHlw==|
+			)
+			(checksum "D42A6F91C47A9D1DD8193DF481EF7DFB")
+		)
+	)
+	(model "kicad-embed://LED_VISHAY_VLMX1300_VIS.step"
+		(offset
+			(xyz -0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 0)
+		)
+	)
+)

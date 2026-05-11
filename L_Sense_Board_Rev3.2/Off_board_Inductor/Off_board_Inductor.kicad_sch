@@ -1,0 +1,56 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "d32eb04c-ff37-415c-a6a0-abe0f70e258b")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 106.68 110.49)
+		(size 21.59 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "03fdd56f-42d4-476c-8cdf-6ddeafd73b92")
+		(property "Sheetname" "Off_board_inductor"
+			(at 106.68 109.7784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Off_board_setup.kicad_sch"
+			(at 106.68 114.8846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Off_board_Inductor"
+				(path "/d32eb04c-ff37-415c-a6a0-abe0f70e258b"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

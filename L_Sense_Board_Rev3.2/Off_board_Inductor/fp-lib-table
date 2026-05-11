@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Umich_Project_Rescue")(type "KiCad")(uri "${KIPRJMOD}/../Shared_Libraries/Umich_Project_Rescue.pretty")(options "")(descr ""))
+)

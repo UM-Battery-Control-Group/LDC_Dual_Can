@@ -1,0 +1,372 @@
+(footprint "SAMTEC_TSM-102-01-X-SV"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "J1"
+		(at 2.07 -2.54 0)
+		(layer "F.SilkS")
+		(uuid "37830a8f-414e-4dd2-8295-d944c6940698")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TSM-102-01-X-SV"
+		(at 11.43 4.445 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2823ec46-0003-4388-b66d-2fee58627c84")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d779c140-4ab2-434c-be91-f6a3b9b78845")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2149a731-d67d-4135-87f4-eb718275b930")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DigiKey_Part_Number" "612-TSM-102-01-S-SV-P-TRCT-ND"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "27c837d5-de94-4138-91fd-e39c21e5ed5c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "SnapEDA_Link" "https://www.snapeda.com/parts/TSM-102-01-S-SV-P-TR/Samtec+Inc./view-part/?ref=snap"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5e4f250a-efef-4479-befb-edb900fc819f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description_1" "TSM - Samtec 2.54mm Single Row Vertical Surface Mount Header  5.84mm Post Height (01) - Fast Stock"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cdcc5c58-1230-44e9-8da2-32f7d7bb97d6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" "None"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "44650194-d0b5-470a-a87d-e3f06e174228")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Check_prices" "https://www.snapeda.com/parts/TSM-102-01-S-SV-P-TR/Samtec+Inc./view-part/?ref=eda"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8606a95b-dd91-4991-beb5-d7a55869221c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "STANDARD" "Manufacturer Recommendations"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c33700b9-0751-4380-86e3-6dadeaf3ed10")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PARTREV" "D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "70971b84-a0c5-4e6f-a63f-82036bb6a38b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MF" "Samtec"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cb1ac868-03bd-45e6-b74b-e418866b3a7f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MP" "TSM-102-01-S-SV-P-TR"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "803919f7-8ab9-491a-8461-03367e540ec3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MANUFACTURER" "Samtec"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3423a8bb-f116-46e5-96c5-c083e8980367")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.54 -1.27)
+		(end -2.255 -1.27)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1d53f938-e017-4a60-8a90-58aded6b39b2")
+	)
+	(fp_line
+		(start -2.54 1.27)
+		(end -2.54 -1.27)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e9b042a4-d81b-4b20-a0ed-3a0920124353")
+	)
+	(fp_line
+		(start -0.285 -1.27)
+		(end 2.54 -1.27)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4cb49760-0881-477d-9940-84065ed6d0b0")
+	)
+	(fp_line
+		(start 0.285 1.27)
+		(end -2.54 1.27)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4ba50dfa-ebdc-4b1b-87e5-bf7a1851a7ad")
+	)
+	(fp_line
+		(start 2.54 -1.27)
+		(end 2.54 1.27)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1fe1a396-371b-4318-93bb-4a08e2c2d3eb")
+	)
+	(fp_line
+		(start 2.54 1.27)
+		(end 2.255 1.27)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4b22dbe4-904f-4c3d-a72e-259e536559d5")
+	)
+	(fp_circle
+		(center 1.27 3.75)
+		(end 1.37 3.75)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "2d233f35-cca5-43d2-9d70-29743a980923")
+	)
+	(fp_line
+		(start -2.79 -3.425)
+		(end 2.79 -3.425)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "07f0f728-49a5-4381-89d4-cbd9564c4054")
+	)
+	(fp_line
+		(start -2.79 3.425)
+		(end -2.79 -3.425)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ea7686fb-0449-41bd-9de6-26d85b682894")
+	)
+	(fp_line
+		(start 2.79 -3.425)
+		(end 2.79 3.425)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "88a7ca89-2745-40c0-8edf-40f73b7a1798")
+	)
+	(fp_line
+		(start 2.79 3.425)
+		(end -2.79 3.425)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a77786c1-f7e9-40bb-9afc-895343ef8588")
+	)
+	(fp_line
+		(start -2.54 -1.27)
+		(end 2.54 -1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "de11fa62-43f0-4d95-a18d-8ed4a3754cd0")
+	)
+	(fp_line
+		(start -2.54 1.27)
+		(end -2.54 -1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a196f174-c6e4-4ee3-a1bf-c656361ec536")
+	)
+	(fp_line
+		(start 2.54 -1.27)
+		(end 2.54 1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "25e06748-3599-45d3-b824-b5087b1ac84c")
+	)
+	(fp_line
+		(start 2.54 1.27)
+		(end -2.54 1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "19336683-dbf3-4b13-8fac-e74360b5a933")
+	)
+	(fp_circle
+		(center 1.27 3.75)
+		(end 1.37 3.75)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "4b22c075-0d68-49b7-a301-88050a90fc0e")
+	)
+	(pad "01" smd rect
+		(at 1.27 1.46)
+		(size 1.27 3.43)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "67bd9242-8354-4c60-be7a-60bb0c551e28")
+	)
+	(pad "02" smd rect
+		(at -1.27 -1.46)
+		(size 1.27 3.43)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "a1323874-a708-442d-9de3-a3fa4f7d281e")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D_Models/TSM-102-01-S-SV-P-TR.stp"
+		(offset
+			(xyz 0 0 1.2)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)
