@@ -34,6 +34,11 @@ from datetime import datetime
 import csv
 import copy
 import logging
+
+import can
+from candle import CandleBus
+
+
 #\VID_1D50&PID_606F&MI_00\7&1D200665&0&0000
 # libwdi:debug [wdi_create_list] Device description: 'USB2CAN v1 (Interface 0)'
 # libwdi:debug [wdi_create_list] Hardware ID: USB\VID_1D50&PID_606F&REV_0000&MI_01
@@ -41,6 +46,8 @@ import logging
 # libwdi:debug [wdi_create_list] Driver version: 10.0.19041.1
 # libwdi:debug [wdi_create_list] WINUSB USB device (3): USB
 #dev = usb.core.find(idVendor=0x1D50, idProduct=0x606F)
+
+#python -m pip install python-can[gs-usb]
 logging.basicConfig(level=logging.INFO)
 heartbeatstruct={0:'|',1:'/',2:'--',3:'\\'}
 ## Set the Config Here
@@ -742,21 +749,25 @@ async def main() -> None:
     # print(be)
     #dev = usb.core.find()backend=be,
 
-    dev = usb.core.find(idVendor=0x1D50, idProduct=0x606F)
-    #backend = usb.backend.libusb1.get_backend(find_library=lambda x: "libusb-1.0.so")
-    #dev= usb.core.find(idVendor=0x1D50, idProduct=0x606F, backend=backend)
-    #dev = libusb_package.find(idVendor=0x1D50, idProduct=0x606F)
-    print(dev)
-    with can.Bus(  # type: ignore
-    # bustype="gs_usb",  channel=dev.product, bus=dev.bus, address=dev.address, index=0,bitrate=500000
- #        interface='pcan', channel='PCAN_USBBUS1', bitrate=500000, auto_reset=True
-         interface="gs_usb",     channel=dev.product, bus=dev.bus,    address=dev.address,  bitrate=500000,
-         #,device_id=0x51,state=can.bus.BusState.ACTIVE
- #     interface="neovi", channel=1, receive_own_messages=False,bitrate=500000
-#        interface="socketcan", channel=1, receive_own_messages=False,bitrate=500000
-    ) as bus:
+    # dev = usb.core.find(idVendor=0x1D50, idProduct=0x606F)
+    # #backend = usb.backend.libusb1.get_backend(find_library=lambda x: "libusb-1.0.so")
+    # #dev= usb.core.find(idVendor=0x1D50, idProduct=0x606F, backend=backend)
+    # #dev = libusb_package.find(idVendor=0x1D50, idProduct=0x606F)
+    # print(dev)
+#     with can.Bus(  # type: ignore
+#     # bustype="gs_usb",  channel=dev.product, bus=dev.bus, address=dev.address, index=0,bitrate=500000
+#  #        interface='pcan', channel='PCAN_USBBUS1', bitrate=500000, auto_reset=True
+#          interface="gs_usb",     channel=dev.product, bus=dev.bus,    address=dev.address,  bitrate=125000,
+#          #,device_id=0x51,state=can.bus.BusState.ACTIVE
+#  #     interface="neovi", channel=1, receive_own_messages=False,bitrate=500000
+# #        interface="socketcan", channel=1, receive_own_messages=False,bitrate=500000
+#     ) as bus:
         #reader = can.AsyncBufferedReader()
-        
+
+    with can.Bus(interface='candle', channel=0, bitrate=125000, data_bitrate=125000, ignore_config=True) as bus:
+    # Bus is an instance of CandleBus.
+        assert isinstance(bus, CandleBus)
+
        # bus.reset()
         #logger = can.Logger(File_Prefix+'logfile'+datetime.now().strftime("%Y%m%d_%H_%M_%S")+'.asc')
 
