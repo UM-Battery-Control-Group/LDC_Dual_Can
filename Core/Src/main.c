@@ -18,7 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "hdc1080.h"
@@ -294,6 +293,7 @@ int main(void)
 	uint32_t mean0,std0,mean1,std1;
 
 	uint16_t RH_raw;
+	uint16_t therm_raw;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -397,6 +397,7 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM3_Init();
   MX_ADC_Init();
+  HAL_ADC_Start(&hadc);
   /* USER CODE BEGIN 2 */
 
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET); //blue LED
@@ -597,6 +598,8 @@ int main(void)
 			  hdc1080_measureRH(&RH_raw);
 			  hdc1080_measureT(& T_raw);
 
+			  HAL_ADC_PollForConversion(&hadc, 10);  // wait up to 10ms
+			  therm_raw = HAL_ADC_GetValue(&hadc);
 
 			  mycandata4.stmp[0]=T_raw;
 			  mycandata4.stmp[1]=T_raw>>8;
@@ -604,9 +607,8 @@ int main(void)
 			  mycandata4.stmp[3]=RH_raw>>8;
 			  mycandata4.stmp[4]=N_AE_0C;
 			  mycandata4.stmp[5]=N_AE_1C;
-	//		  mycandata4.stmp[6]=N_AE_2C;
-	//		  mycandata4.stmp[7]=N_AE_3C;
-				N_AE_0C=0;
+			  mycandata4.stmp[6]=therm_raw;
+			  mycandata4.stmp[7]=therm_raw>>8;
 				N_AE_1C=0;
 	//			N_AE_2C=0;
 	//			N_AE_3C=0;
@@ -819,22 +821,11 @@ static void MX_ADC_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_0;
   sConfig.Rank = ADC_RANK_CHANNEL_NUMBER;
-  sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_239CYCLES_5;
   if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
   {
     Error_Handler();
   }
-
-  /** Configure for the selected ADC regular channel to be converted.
-  */
-  sConfig.Channel = ADC_CHANNEL_TEMPSENSOR;
-  if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN ADC_Init 2 */
-
-  /* USER CODE END ADC_Init 2 */
 
 }
 

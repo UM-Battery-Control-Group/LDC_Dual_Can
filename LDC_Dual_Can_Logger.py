@@ -2,6 +2,7 @@ from unicodedata import decimal
 import numpy as np
 import time
 import asyncio
+import math
 import functools
 import sys
 from typing import List
@@ -62,7 +63,7 @@ elif config == 2:
 elif config == 3:
     N_channels = 120
     start_idx =  0
-BattCelldata = [{'Datapoint Number':0,'Test Time':0,'Current':0,'Potential':0,'Timestamp':int(time.time()*1000),'lastData':int(time.time()*1000),'LDC SENSOR':0,'LDC REF':0,'Ambient Temperature':0,'Ambient RH':0,'LDC N':0,'LDC STD':0,'REF N':0,'REF STD':0,'LDC scaled':0,'LDC status':0,'REF status':0,'Filename':'editme','StartTime':int(time.time()*1000),'Newdata':0,'LogStatus':'Closed','DriveCurrent':0,'DriveCurrentRef':0,'LDCStatus':0,'NAHwarn':0,'NAHwarnRef':0,'heartbeat':0} for i in range(start_idx,start_idx+N_channels)]
+BattCelldata = [{'Datapoint Number':0,'Test Time':0,'Current':0,'Potential':0,'Timestamp':int(time.time()*1000),'lastData':int(time.time()*1000),'LDC SENSOR':0,'LDC REF':0,'Ambient Temperature':0,'Ambient RH':0,'LDC N':0,'LDC STD':0,'REF N':0,'REF STD':0,'LDC scaled':0,'LDC status':0,'REF status':0,'Filename':'editme','StartTime':int(time.time()*1000),'Newdata':0,'LogStatus':'Closed','DriveCurrent':0,'DriveCurrentRef':0,'LDCStatus':0,'NAHwarn':0,'NAHwarnRef':0, 'Battery Temperature':0,'heartbeat':0} for i in range(start_idx,start_idx+N_channels)]
 File_Prefix='' #'E:\\VDFData\\'
 
 # target VDF format.
@@ -241,6 +242,8 @@ class MainWindow(QMainWindow):
         self.l31 = QLabel("0")
         self.l12 = QLabel("TimeStamp : DeltaT")
         self.l32 = QLabel("0")
+        self.l13 = QLabel("Battery Temp")
+        self.l33 = QLabel("0")
 
 
         self.l1 = QLabel("411")
@@ -282,6 +285,8 @@ class MainWindow(QMainWindow):
         infolayout.addWidget(self.l03,ix,iy)
         iy+=1
         infolayout.addWidget(self.l04,ix,iy)
+        iy+=1
+        infolayout.addWidget(self.l13,ix,iy)
         iy=0
         ix+=1
         infolayout.addWidget(self.l21,ix,iy)
@@ -291,6 +296,8 @@ class MainWindow(QMainWindow):
         infolayout.addWidget(self.l23,ix,iy)
         iy+=1
         infolayout.addWidget(self.l24,ix,iy)
+        iy+=1
+        infolayout.addWidget(self.l33,ix,iy)
         iy=0
         ix+=1
         infolayout.addWidget(self.l05,ix,iy)
@@ -483,6 +490,7 @@ class MainWindow(QMainWindow):
         self.l30.setText(str(BattCelldata[self.idx]['REF status'])+ " : "+ str(BattCelldata[self.idx]['NAHwarnRef']))
         self.l31.setText(str(BattCelldata[self.idx]['DriveCurrent']))
         self.l32.setText(str(BattCelldata[self.idx]['Timestamp'])+ " : "+ str(BattCelldata[self.idx]['Timestamp']-BattCelldata[self.idx]['lastData'])  )
+        self.l33.setText(str(BattCelldata[self.idx]['Battery Temperature']))
         # self.lsens.setText(str(time.time()))
         pixmapi = QStyle.StandardPixmap.SP_MessageBoxCritical
         icon = self.style().standardIcon(pixmapi)
@@ -567,10 +575,15 @@ def parse_msg(msg: can.Message)-> None:
     elif(msg.arbitration_id % 16==4):
         LDC_Temperature=(int.from_bytes(msg.data[0:2],'little')/65536.0)*165.0-40.0
         LDC_RH=int.from_bytes(msg.data[2:4],'little')/65536.0*100.0 
+        ADC_Raw_Val=(int.from_bytes(msg.data[6:8],'little'))
+        ADC_Voltage=ADC_Raw_Val/4095*3.3
+        ADC_Resistance = (ADC_Voltage / (3.3 - ADC_Voltage)) * 10000.0
+        ADC_Temperature= 1/(1/298.15 + (1/3435.0)*math.log(ADC_Resistance/10000.0))-273.15
         for i in range(N_channels):
             if(logging_dict['Temperature msg ID'].values[i]==msg.arbitration_id):
                 BattCelldata[i]['Ambient Temperature']="{:.2f}".format(LDC_Temperature)        
                 BattCelldata[i]['Ambient RH']="{:.2f}".format(LDC_RH) 
+                BattCelldata[i]['Battery Temperature'] = "{:.2f}".format(ADC_Raw_Val) 
     elif(msg.arbitration_id % 16==5):
         status=int.from_bytes(msg.data[0:4],'little')
         drive0=int(msg.data[4])
@@ -694,8 +707,8 @@ async def logdata() -> None:
 # open the log build script
 # todo : add code to start and stop indivitual channels.
     # open files. 'Filename':0,'Start_Time':0,'Newdata':0,'Filepath':0
-    Headerlist=['Datapoint Number','Test Time','Current','Potential','Timestamp','LDC SENSOR','LDC REF','Ambient Temperature','Ambient RH','LDC N','LDC STD','REF N','REF STD','LDC scaled','LDC status','REF status','DriveCurrent','DriveCurrentRef','NAHwarn','NAHwarnRef']
-    SubHeader=['none','second','amp','volt','epoch','none','none','celsius','percent','none','none','none','none','none','none','none','none','none','none','none']
+    Headerlist=['Datapoint Number','Test Time','Current','Potential','Timestamp','LDC SENSOR','LDC REF','Ambient Temperature','Ambient RH','LDC N','LDC STD','REF N','REF STD','LDC scaled','LDC status','REF status','DriveCurrent','DriveCurrentRef','NAHwarn','NAHwarnRef', 'Battery Temperature']
+    SubHeader=['none','second','amp','volt','epoch','none','none','celsius','percent','none','none','none','none','none','none','none','none','none','none','none', 'celsius']
     while True:
         await asyncio.sleep(.1)
         
@@ -864,4 +877,3 @@ if __name__ == "__main__":
 
 #while True:
 #    receive_can(device)
-    
