@@ -78,6 +78,7 @@ volatile uint8_t flag0=0;//,flag1=0,flag2=0,flag3=0;
 volatile uint8_t flag_sample=0;
  uint32_t Data0[2*SAMPLE_LENGTH]; // use two buffers for calculating stats while collecting data.
  uint32_t Data1[2*SAMPLE_LENGTH];
+ uint32_t Data_therm[2*SAMPLE_LENGTH];
 // uint32_t Data2[2*SAMPLE_LENGTH];
 // uint32_t Data3[2*SAMPLE_LENGTH];
 uint8_t datahalf=0;
@@ -143,6 +144,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 //			//=sen0_ch2;
 //			status3=LDC1614_get_channel_result(3, &Data3[index_data+datahalf*SAMPLE_LENGTH]);
 			//=sen0_ch3;
+			Data_therm[index_data+datahalf*SAMPLE_LENGTH] = HAL_ADC_GetValue(&hadc);
 
 
 
@@ -290,7 +292,7 @@ int main(void)
 	int valid_samples=0;
 	u32 Data_quality[(SAMPLE_LENGTH/32)+1];
 	uint16_t T_raw;
-	uint32_t mean0,std0,mean1,std1;
+	uint32_t mean0,std0,mean1,std1, mean_therm0, std_therm0;
 
 	uint16_t RH_raw;
 	uint16_t therm_raw;
@@ -518,8 +520,8 @@ int main(void)
 				  mycandata4.stmp[3]=RH_raw>>8;
 				  mycandata4.stmp[4]=N_AE_0C;
 				  mycandata4.stmp[5]=N_AE_1C;
-	//			  mycandata4.stmp[6]=N_AE_2C;
-	//			  mycandata4.stmp[7]=N_AE_3C;
+				  mycandata4.stmp[6]=therm_raw;
+				  mycandata4.stmp[7]=therm_raw>>8;
 					N_AE_0C=0;
 					N_AE_1C=0;
 	//				N_AE_2C=0;
@@ -598,8 +600,10 @@ int main(void)
 			  hdc1080_measureRH(&RH_raw);
 			  hdc1080_measureT(& T_raw);
 
-			  HAL_ADC_PollForConversion(&hadc, 10);  // wait up to 10ms
-			  therm_raw = HAL_ADC_GetValue(&hadc);
+
+			  get_stats(&Data_therm[(1-datahalf)*SAMPLE_LENGTH], &std_therm0, &mean_therm0);
+			  get_valid_stats(&Data_therm[(1-datahalf)*SAMPLE_LENGTH], Data_quality, &std_therm0, &mean_therm0, &valid_samples);
+			  therm_raw = mean_therm0;
 
 			  mycandata4.stmp[0]=T_raw;
 			  mycandata4.stmp[1]=T_raw>>8;
