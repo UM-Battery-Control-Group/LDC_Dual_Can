@@ -67,7 +67,7 @@ elif config == 2:
 elif config == 3:
     N_channels = 120
     start_idx =  0
-BattCelldata = [{'Datapoint Number':0,'Test Time':0,'Current':0,'Potential':0,'Timestamp':int(time.time()*1000),'lastData':int(time.time()*1000),'LDC SENSOR':0,'LDC REF':0,'Ambient Temperature':0,'Ambient RH':0,'LDC N':0,'LDC STD':0,'REF N':0,'REF STD':0,'LDC scaled':0,'LDC status':0,'REF status':0,'Filename':'editme','StartTime':int(time.time()*1000),'Newdata':0,'LogStatus':'Closed','DriveCurrent':0,'DriveCurrentRef':0,'LDCStatus':0,'NAHwarn':0,'NAHwarnRef':0, 'Battery Temperature':0,'heartbeat':0} for i in range(start_idx,start_idx+N_channels)]
+BattCelldata = [{'Datapoint Number':0,'Test Time':0,'Current':0,'Potential':0,'Timestamp':int(time.time()*1000),'lastData':int(time.time()*1000),'LDC SENSOR':0,'LDC REF':0,'Ambient Temperature':0,'Ambient RH':0,'LDC N':0,'LDC STD':0,'REF N':0,'REF STD':0,'LDC scaled':0,'LDC status':0,'REF status':0,'Filename':'editme','StartTime':int(time.time()*1000),'Newdata':0,'LogStatus':'Closed','DriveCurrent':0,'DriveCurrentRef':0,'LDCStatus':0,'NAHwarn':0,'NAHwarnRef':0, 'Battery Temperature':0,'heartbeat':0,'lastLogged':-1} for i in range(start_idx,start_idx+N_channels)]
 File_Prefix='' #'E:\\VDFData\\'
 
 # target VDF format.
@@ -389,6 +389,7 @@ class MainWindow(QMainWindow):
         BattCelldata[self.idx]['Filename']="%s" %(text)
         BattCelldata[self.idx]['LogStatus']='Start'
         BattCelldata[self.idx]['Datapoint Number']=0
+        BattCelldata[self.idx]['lastLogged']=-1   # reset dedup latch for the new run
         BattCelldata[self.idx]['StartTime']=int(time.time()*1000)
         BattCelldata[self.idx]['Timestamp']=BattCelldata[self.idx]['StartTime']
                     
@@ -745,7 +746,16 @@ async def logdata() -> None:
 
                 if(BattCelldata[i]['Newdata']==1):
                     BattCelldata[i]['Newdata']=0
-                    if(BattCelldata[i]['Datapoint Number']>0): #skip data points.
+                    # Only log a datapoint once. 'Newdata' is raised by the status CAN
+                    # frame (arbid %16==6), which is decoupled from the LDC-data frame that
+                    # increments 'Datapoint Number'. If 'Newdata' is raised again for the
+                    # same datapoint (extra status frame, or a race between the python-can
+                    # notifier thread and this asyncio writer), the row would be appended
+                    # twice -> the ~16.5% duplicate rows seen in the logs. Latch on the
+                    # datapoint number so each is written at most once.
+                    if(BattCelldata[i]['Datapoint Number']>0 and
+                       BattCelldata[i]['Datapoint Number']!=BattCelldata[i]['lastLogged']): #skip data points.
+                        BattCelldata[i]['lastLogged']=BattCelldata[i]['Datapoint Number']
                         df=pd.DataFrame([{k:v for k,v in BattCelldata[i].items()if k in Headerlist}])
                         try:
                             df.to_csv(BattCelldata[i]['Filename'], mode='a', index=False, header=False, sep ='\t')
