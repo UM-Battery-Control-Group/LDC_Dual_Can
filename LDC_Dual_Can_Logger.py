@@ -11,7 +11,7 @@ import can
 import usb
 import usb.core
 from usb.backend import libusb1
-# import libusb
+import libusb
 from can.notifier import MessageRecipient
 # import usb
 # from PySide6.QtWidgets import (
@@ -55,7 +55,11 @@ heartbeatstruct={0:'|',1:'/',2:'--',3:'\\'}
 ## Set 1 for Chamber A and 2 for Chambers B & C
 config = 1
 if config == 1:
+<<<<<<< Updated upstream
     N_channels = 2
+=======
+    N_channels = 20
+>>>>>>> Stashed changes
     start_idx =  0
 elif config == 2:
     N_channels = 80
@@ -781,6 +785,10 @@ async def main() -> None:
 
     with can.Bus(interface='socketcan', channel="can2", bitrate=125000, data_bitrate=125000, ignore_config=True) as bus:
     # Bus is an instance of CandleBus.
+<<<<<<< Updated upstream
+=======
+        # assert isinstance(bus, CandleBus)
+>>>>>>> Stashed changes
 
        # bus.reset()
         #logger = can.Logger(File_Prefix+'logfile'+datetime.now().strftime("%Y%m%d_%H_%M_%S")+'.asc')

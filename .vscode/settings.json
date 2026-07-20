@@ -1,3 +1,4 @@
 {
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "python.defaultInterpreterPath": "/home/siegeljb/LDC_Dual_Can/.venv/bin/python"
 }
