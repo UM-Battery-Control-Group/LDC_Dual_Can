@@ -55,7 +55,7 @@ heartbeatstruct={0:'|',1:'/',2:'--',3:'\\'}
 ## Set 1 for Chamber A and 2 for Chambers B & C
 config = 1
 if config == 1:
-    N_channels = 4
+    N_channels = 2
     start_idx =  0
 elif config == 2:
     N_channels = 80
@@ -82,7 +82,7 @@ File_Prefix='' #'E:\\VDFData\\'
 
 #logging_dict={}
 dfdc = pd.read_csv("drive_current.csv")
-logging_dict=pd.read_excel("neware LDC data logging.xlsx")
+logging_dict=pd.read_excel("LDC_Dual_log.xlsx")
 if config == 2:
     logging_dict = logging_dict.iloc[start_idx:,:]
     logging_dict = logging_dict.reset_index()
@@ -578,12 +578,14 @@ def parse_msg(msg: can.Message)-> None:
         ADC_Raw_Val=(int.from_bytes(msg.data[6:8],'little'))
         ADC_Voltage=ADC_Raw_Val/4095*3.3
         ADC_Resistance = (ADC_Voltage / (3.3 - ADC_Voltage)) * 10000.0
-        ADC_Temperature= 1/(1/298.15 + (1/3435.0)*math.log(ADC_Resistance/10000.0))-273.15
+        lnR = math.log(ADC_Resistance)
+        ADC_Temperature_Inverse = ((8.77413123e-4)) + ((2.53227420e-4)*lnR) + ((1.84514839e-7)*lnR*lnR*lnR)
+        ADC_Temperature = (1/ADC_Temperature_Inverse) - 273.15
         for i in range(N_channels):
             if(logging_dict['Temperature msg ID'].values[i]==msg.arbitration_id):
                 BattCelldata[i]['Ambient Temperature']="{:.2f}".format(LDC_Temperature)        
                 BattCelldata[i]['Ambient RH']="{:.2f}".format(LDC_RH) 
-                BattCelldata[i]['Battery Temperature'] = "{:.2f}".format(ADC_Raw_Val) 
+                BattCelldata[i]['Battery Temperature'] = "{:.2f}".format(ADC_Temperature) 
     elif(msg.arbitration_id % 16==5):
         status=int.from_bytes(msg.data[0:4],'little')
         drive0=int(msg.data[4])
@@ -777,9 +779,8 @@ async def main() -> None:
 #     ) as bus:
         #reader = can.AsyncBufferedReader()
 
-    with can.Bus(interface='candle', channel=0, bitrate=125000, data_bitrate=125000, ignore_config=True) as bus:
+    with can.Bus(interface='socketcan', channel="can2", bitrate=125000, data_bitrate=125000, ignore_config=True) as bus:
     # Bus is an instance of CandleBus.
-        assert isinstance(bus, CandleBus)
 
        # bus.reset()
         #logger = can.Logger(File_Prefix+'logfile'+datetime.now().strftime("%Y%m%d_%H_%M_%S")+'.asc')

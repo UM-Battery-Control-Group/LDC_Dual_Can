@@ -37,7 +37,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
-#define Base_Can_address 0x10
+#define Base_Can_address 0x100
 
 union Candata {
  struct { uint32_t data0 :32;
@@ -513,6 +513,8 @@ int main(void)
 				  AEH[1]=0;
 				  //AEH[2]=0;
 				  //AEH[3]=0;
+
+				  therm_raw = HAL_ADC_GetValue(&hadc);
 
 				  mycandata4.stmp[0]=T_raw;
 				  mycandata4.stmp[1]=T_raw>>8;
