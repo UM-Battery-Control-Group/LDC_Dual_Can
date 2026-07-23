@@ -574,12 +574,13 @@ def parse_msg(msg: can.Message)-> None:
                 BattCelldata[i]['REF N']=LDC_Nsamples
                 BattCelldata[i]['REF STD']=LDC_STDEV
     elif(msg.arbitration_id % 16==4):
+        print("i reached here!")
         LDC_Temperature=(int.from_bytes(msg.data[0:2],'little')/65536.0)*165.0-40.0
         LDC_RH=int.from_bytes(msg.data[2:4],'little')/65536.0*100.0 
         ADC_Raw_Val=(int.from_bytes(msg.data[6:8],'little'))
         ADC_Voltage=ADC_Raw_Val/4095*3.3
         ADC_Resistance = (ADC_Voltage / (3.3 - ADC_Voltage)) * 10000.0
-        lnR = math.log(ADC_Resistance)
+        lnR = math.log(max(ADC_Resistance, 1e-9))
         ADC_Temperature_Inverse = ((8.77413123e-4)) + ((2.53227420e-4)*lnR) + ((1.84514839e-7)*lnR*lnR*lnR)
         ADC_Temperature = (1/ADC_Temperature_Inverse) - 273.15
         for i in range(N_channels):
@@ -789,7 +790,7 @@ async def main() -> None:
 #     ) as bus:
         #reader = can.AsyncBufferedReader()
 
-    with can.Bus(interface='socketcan', channel="can2", bitrate=125000, data_bitrate=125000, ignore_config=True) as bus:
+    with can.Bus(interface='socketcan', channel="can0", bitrate=125000, data_bitrate=125000, ignore_config=True) as bus:
         # Bus is an instance of CandleBus.
         # assert isinstance(bus, CandleBus)
 

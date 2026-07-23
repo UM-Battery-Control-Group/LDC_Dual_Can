@@ -1,8 +1,0 @@
-Start Time: 1707871122951
-Format Version: 3.0
-Timezone: America/New_York
-Channel Number: 1
-[DATA START]
-Datapoint Number	Test Time	Current	Potential	Timestamp	LDC SENSOR	LDC REF	Ambient Temperature	Ambient RH	LDC N	LDC STD	REF N	REF STD	LDC scaled	LDC status	REF status	DriveCurrent	DriveCurrentRef	NAHwarn	NAHwarnRef
-none	second	amp	volt	epoch	none	none	celsius	percent	none	none	none	none	none	none	none	none	none	none	none
-1	3.685	0	0	1707871126636	2668362	0	22.99	33.31	50	2	0	0	0	0	0	4	0	0	0
