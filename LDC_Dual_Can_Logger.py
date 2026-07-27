@@ -55,7 +55,7 @@ heartbeatstruct={0:'|',1:'/',2:'--',3:'\\'}
 ## Set 1 for Chamber A and 2 for Chambers B & C
 config = 1
 if config == 1:
-    N_channels = 20
+    N_channels = 4
     start_idx =  0
 elif config == 2:
     N_channels = 80
@@ -261,7 +261,7 @@ class MainWindow(QMainWindow):
 
         self.combobox = QListWidget()
         # self.combobox.addItems(['411','412','413','414','415','416','417','418'])
-        self.combobox.addItems(['{:03d} : R{:02d} CH'.format(logging_dict.index[i]+start_idx+1,logging_dict['Neware rack'].values[i])+ logging_dict['Neware Channel'].values[i] + ' \t CELL{:03d}'.format(logging_dict['Cell #'].values[i]) + ' \t BaseID 0x{:x}'.format(logging_dict['Temperature msg ID'].values[i]-4)  + '   Can_Sub {:02d}'.format(logging_dict['Can Sub'].values[i])   for i in range(N_channels)])
+        self.combobox.addItems(['{:03d} : R{:02d} CH'.format(logging_dict.index[i]+start_idx+1,logging_dict['Neware rack'].values[i])+ str(logging_dict['Neware Channel'].values[i]) + ' \t CELL{:03d}'.format(logging_dict['Cell #'].values[i]) + ' \t BaseID 0x{:x}'.format(logging_dict['Temperature msg ID'].values[i]-4)  + '   Can_Sub {:02d}'.format(logging_dict['Can Sub'].values[i])   for i in range(N_channels)])
    
         #logging_dict.index[i]
         #my_value = 411
@@ -574,7 +574,6 @@ def parse_msg(msg: can.Message)-> None:
                 BattCelldata[i]['REF N']=LDC_Nsamples
                 BattCelldata[i]['REF STD']=LDC_STDEV
     elif(msg.arbitration_id % 16==4):
-        print("i reached here!")
         LDC_Temperature=(int.from_bytes(msg.data[0:2],'little')/65536.0)*165.0-40.0
         LDC_RH=int.from_bytes(msg.data[2:4],'little')/65536.0*100.0 
         ADC_Raw_Val=(int.from_bytes(msg.data[6:8],'little'))
